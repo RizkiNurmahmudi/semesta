@@ -1,0 +1,97 @@
+---
+id: fis-rangkaian
+level: L3
+domain: fisika
+topic: listrik
+title: Arus & Rangkaian
+prerequisites: [fis-listrik-statis, mat-persamaan-linear]
+estMinutes: 20
+simulations: [sim-rangkaian]
+caseStudies: []
+version: 1
+---
+
+## Intuisi
+
+Lampu belajar Dimas tiba-tiba mati. "Bohlamnya putus? Baterainya habis?
+Kabelnya lepas?" Untuk menjawabnya, Dimas harus paham jalan yang ditempuh
+listrik. Listrik yang *mengalir* terus-menerus disebut **arus**, dan ia hanya
+bisa mengalir kalau ada **rangkaian tertutup** — jalan melingkar tanpa putus
+dari baterai, lewat lampu, kembali lagi ke baterai.
+
+## Konsep Inti
+
+Tiga besaran dalam rangkaian, analoginya seperti air di selang:
+
+- **Tegangan (V, volt)**: "dorongan" yang menggerakkan muatan — seperti tekanan air.
+- **Arus (I, ampere)**: banyaknya muatan yang mengalir tiap detik — seperti debit air.
+- **Hambatan (R, ohm)**: yang menghambat aliran — seperti selang yang sempit.
+
+Hubungannya dirumuskan **Hukum Ohm**: V = I × R. Makin besar tegangan atau
+makin kecil hambatan, makin besar arusnya.
+
+Dua cara merangkai komponen:
+
+- **Seri** (berderet): arus sama di semua titik; hambatan dijumlahkan
+  (R_total = R₁ + R₂ + ...). Kalau satu lampu mati, semua mati — seperti lampu
+  hias pohon Natal murah.
+- **Paralel** (bercabang): tegangan sama di tiap cabang; tiap lampu mendapat
+  tegangan penuh sehingga menyala terang. Kalau satu mati, yang lain tetap
+  menyala — seperti instalasi lampu rumah.
+
+Saklar hanyalah pemutus/penyambung jalan. Dan ingat: arus hanya mengalir di
+rangkaian tertutup.
+
+## Rumus
+
+- Hukum Ohm: V = I × R (tegangan = arus × hambatan)
+- Seri: R_total = R₁ + R₂ + ...
+- Paralel (dua hambatan): 1/R_total = 1/R₁ + 1/R₂
+
+## Contoh Terpandu
+
+**Contoh 1.** Sebuah lampu 10 Ω dipasang pada baterai 3 V. Berapa arus yang
+mengalir?
+
+- I = V / R = 3 / 10 = 0,3 A
+
+Arusnya 0,3 ampere — cukup untuk menyalakan lampu senter kecil.
+
+**Contoh 2.** Dua lampu masing-masing 10 Ω dipasang pada baterai 6 V.
+Bandingkan arus pada rangkaian seri vs paralel!
+
+- Seri: R_total = 10 + 10 = 20 Ω → I = 6 / 20 = 0,3 A (terbagi, redup).
+- Paralel: 1/R_total = 1/10 + 1/10 = 2/10 → R_total = 5 Ω → I_total = 6 / 5 = 1,2 A.
+  Tiap lampu mendapat tegangan penuh 6 V → menyala terang.
+
+Inilah alasan lampu rumah dipasang paralel, bukan seri.
+
+## Kesalahpahaman Umum
+
+- **"Arus habis dipakai lampu."** Salah. Di rangkaian seri, arus yang keluar
+  lampu sama besar dengan yang masuk — lampu mengubah energi listrik jadi
+  cahaya, bukan "memakan" arusnya.
+- **"Baterai lebih besar selalu bikin lampu lebih terang."** Tidak selalu.
+  Terang-redup ditentukan arus, yang bergantung pada tegangan *dan* hambatan
+  total rangkaiannya.
+- **"Burung di kabel listrik pasti tersetrum."** Tidak, selama ia hanya
+  menyentuh satu kabel: tidak ada beda tegangan yang mengalirkan arus lewat
+  tubuhnya. Bahaya muncul kalau ia menyentuh dua titik bertegangan beda.
+
+## Di Dunia Nyata
+
+PLN memakai tegangan sangat tinggi (150.000 V ke atas) untuk transmisi jarak
+jauh supaya arusnya kecil dan energi yang hilang sedikit — lalu diturunkan
+jadi 220 V di rumahmu. Sekring/MCB di rumah adalah "penjaga": ia memutus
+rangkaian kalau arus melebihi batas aman.
+
+## Ringkasan
+
+- Arus mengalir hanya di rangkaian tertutup; tegangan = dorongan, hambatan =
+  penghambat.
+- Hukum Ohm: V = I × R.
+- Seri: arus sama, hambatan dijumlah; paralel: tegangan sama, tiap cabang
+  mandiri.
+- Lampu rumah dipasang paralel.
+- Praktikum aman: HANYA baterai AA (1,5 V) + lampu senter + kabel. Jangan
+  pernah mengutak-atik colokan PLN — minta dampingan orang dewasa.

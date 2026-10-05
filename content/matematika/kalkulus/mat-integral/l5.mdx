@@ -1,0 +1,86 @@
+---
+id: mat-integral
+level: L5
+domain: matematika
+topic: kalkulus
+title: Integral
+prerequisites: [mat-turunan]
+estMinutes: 30
+simulations: [sim-integral]
+caseStudies: []
+version: 1
+---
+
+## Intuisi
+
+Dalam cerita "Kolam Kakek", Kakek ingin tahu berapa air untuk mengisi kolam barunya yang bentuknya tak beraturan — bukan kotak, bukan lingkaran. Tidak ada rumus jadi untuk "bentuk aneh"! Tetapi ada akal: potong kolam menjadi banyak persegi kecil, hitung luas tiap potongan, lalu jumlahkan. Makin kecil potongannya, makin tepat hasilnya. **Integral adalah mesin penjumlahan untuk tak hingga banyak potongan yang tak hingga kecil** — untuk luas, volume, dan total akumulasi apa pun.
+
+## Konsep Inti
+
+**Integral tak tentu** ∫f(x) dx adalah **antiturunan**: fungsi yang turunannya sama dengan f(x). Karena turunan konstanta = 0, selalu ada "+ C".
+
+∫xⁿ dx = xⁿ⁺¹/(n+1) + C (untuk n ≠ −1)
+
+**Integral tentu** ∫ₐᵇ f(x) dx adalah **luas bertanda** di bawah kurva dari a sampai b — dihitung sebagai limit jumlah Riemann (persegi-persegi kecil, persis seperti potongan kolam Kakek!).
+
+**Teorema Dasar Kalkulus** (jembatan agung!):
+
+∫ₐᵇ f(x) dx = F(b) − F(a), dengan F antiturunan dari f.
+
+Luas = (nilai antiturunan di ujung) − (nilai di awal). Tidak perlu menjumlahkan jutaan persegi satu per satu!
+
+**Sifat-sifat**: ∫ₐᵇ [f+g] = ∫f + ∫g; ∫ₐᵇ c·f = c·∫f; ∫ₐᵇ f = −∫ᵦₐ f.
+
+**Aplikasi**: jarak = integral kecepatan; volume = integral luas penampang; total hujan = integral laju curah hujan.
+
+## Rumus
+
+- ∫xⁿ dx = xⁿ⁺¹/(n+1) + C, untuk n ≠ −1
+- ∫sin x dx = −cos x + C; ∫cos x dx = sin x + C; ∫eˣ dx = eˣ + C
+- Teorema dasar: ∫ₐᵇ f(x) dx = F(b) − F(a)
+- Substitusi: ∫f(g(x))·g'(x) dx — "aturan rantai terbalik"
+- Cara membaca ∫ₐᵇ f(x) dx: "integral f(x) dx dari a sampai b"
+
+## Contoh Terpandu
+
+**Contoh 1 — Antiturunan.** ∫(3x² + 2x) dx = 3·(x³/3) + 2·(x²/2) + C = x³ + x² + C. Cek: turunannya 3x² + 2x (benar).
+
+**Contoh 2 — Luas di bawah parabola.** Luas antara y = x², sumbu-x, dari 0 sampai 2:
+
+∫₀² x² dx = [x³/3]₀² = 8/3 − 0 = 8/3 ≈ 2,667 satuan luas.
+
+**Contoh 3 — Jarak dari kecepatan.** Kecepatan Dimas v(t) = 10t m/s selama 3 detik. Jarak total?
+
+s = ∫₀³ 10t dt = [5t²]₀³ = 45 − 0 = 45 m. (Bandingkan: ini luas segitiga ½ × 3 × 30 = 45 (benar) — konsisten!)
+
+**Contoh 4 — Kolam Kakek.** Penampang kolam mengikuti y = 4 − x² dari x = −2 sampai 2 (meter). Luas penampang?
+
+∫₋₂² (4 − x²) dx = [4x − x³/3]₋₂² = (8 − 8/3) − (−8 + 8/3) = 16 − 16/3 = 32/3 ≈ 10,67 m². Jika kolam panjang 5 m: volume = 10,67 × 5 ≈ 53,33 m³ ≈ 53.330 liter air!
+
+**Contoh 5 — Substitusi.** Hitung ∫2x·e^(x²) dx!
+
+Misalkan u = x², maka du = 2x dx. Integral menjadi ∫e^u du = e^u + C = e^(x²) + C. Cek dengan turunan: d/dx[e^(x²)] = e^(x²)·2x (aturan rantai!) — cocok (benar).
+
+**Contoh 6 — Luas antara dua kurva.** Berapa luas daerah yang dibatasi y = x dan y = x² dari x = 0 sampai 1?
+
+Di selang ini x ≥ x², jadi luas = ∫₀¹ (x − x²) dx = [x²/2 − x³/3]₀¹ = (1/2 − 1/3) − 0 = 1/6 ≈ 0,167 satuan luas. Kuncinya: kurva atas dikurangi kurva bawah!
+
+## Kesalahpahaman Umum
+
+- **"Integral selalu menghasilkan luas positif."** Integral tentu menghitung luas **bertanda**: bagian kurva di bawah sumbu-x bernilai negatif! Luas geometri = integral dari nilai mutlak.
+- **"+ C tidak penting."** Untuk integral tak tentu, C wajib — ada tak hingga banyak antiturunan (x²+1, x²+5, ...). Untuk integral tentu, C saling menghapus.
+- **"∫f·g = ∫f · ∫g."** Salah! Tidak ada aturan seperti itu. Integral hasil kali butuh teknik khusus (parsial atau substitusi).
+- **"Teorema dasar berlaku untuk semua fungsi."** Butuh f kontinu pada [a, b]. Fungsi yang terputus harus dipecah dulu per selang.
+
+## Di Dunia Nyata
+
+BMKG memperkirakan total curah hujan dari data laju hujan per jam (integral!). Insinyur menghitung volume bendungan seperti Jatiluhur dari penampang yang tak beraturan. Dokter menghitung total obat yang diserap tubuh dari laju penyerapan. Panel surya: total energi = integral daya terhadap waktu. Di mana ada "total dari laju", di situ ada integral.
+
+## Ringkasan
+
+- Integral = antiturunan (tak tentu, +C) = luas/akumulasi (tentu).
+- ∫xⁿ dx = xⁿ⁺¹/(n+1) + C.
+- Teorema dasar: ∫ₐᵇ f(x)dx = F(b) − F(a) — tanpa menjumlahkan jutaan persegi!
+- Jarak = integral kecepatan; volume = integral luas penampang.
+- Waspada: luas bertanda (bisa negatif), +C wajib untuk tak tentu.
+- Turunan memecah menjadi laju; integral merakit kembali menjadi total — keduanya saling invers!

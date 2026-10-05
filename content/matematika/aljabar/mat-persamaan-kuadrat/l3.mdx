@@ -1,0 +1,113 @@
+---
+id: mat-persamaan-kuadrat
+level: L3
+domain: matematika
+topic: aljabar
+title: Persamaan Kuadrat
+prerequisites: [mat-persamaan-linear, mat-pangkat-akar]
+estMinutes: 22
+simulations: [sim-kuadrat]
+caseStudies: []
+version: 1
+---
+
+## Intuisi
+
+Dimas melempar bola ke atas. Bola naik, berhenti sesaat, lalu jatuh ke
+tanah. Kalau tinggi bola dicatat tiap detik, titik-titiknya tidak membentuk
+garis lurus — melainkan lengkungan seperti mangkuk terbalik. Lengkungan
+ini muncul karena waktu muncul **pangkat dua** dalam rumusnya.
+
+Persamaan kuadrat adalah "kakak" dari persamaan linear: variabelnya
+berpangkat dua. Ia menjawab pertanyaan seperti "kapan bola menyentuh
+tanah?" atau "berapa ukuran kebun agar luasnya pas 100 m²?"
+
+## Konsep Inti
+
+Bentuk umum persamaan kuadrat: **ax² + bx + c = 0**, dengan syarat
+**a ≠ 0** (kalau a = 0, ia menyusut jadi persamaan linear biasa).
+
+Penyelesaiannya disebut **akar-akar** persamaan — nilai x yang membuat
+persamaan bernilai benar. Persamaan kuadrat bisa punya dua akar, satu
+akar, atau tidak punya akar real sama sekali.
+
+**Diskriminan** menentukan hal itu sebelum kita menghitung akarnya:
+**D = b² − 4ac**.
+- D > 0: dua akar real berbeda (grafik memotong sumbu-x di dua titik).
+- D = 0: satu akar kembar (grafik menyinggung sumbu-x).
+- D < 0: tidak ada akar real (grafik tidak menyentuh sumbu-x).
+
+Grafik persamaan kuadrat selalu berbentuk **parabola** — lengkungan yang
+sama dengan lintasan bola Dimas. Parabola punya **titik puncak** (titik
+tertinggi atau terendah) yang terletak pada garis **sumbu simetri**
+x = −b / 2a. Jika a > 0, parabola membuka ke atas (punya titik terendah);
+jika a < 0, membuka ke bawah (punya titik tertinggi). Informasi ini
+berguna saat mencari nilai maksimum atau minimum.
+
+## Rumus
+
+**Rumus abc** (berlaku selalu):
+
+**x = (−b ± √(b² − 4ac)) / 2a**
+
+Cara membaca: "x sama dengan negatif b, plus-minus akar dari b kuadrat
+kurang 4ac, dibagi 2a." Tanda ± memberi dua kemungkinan jawaban.
+
+**Pemfaktoran** (jalan pintas bila bisa): ubah ax² + bx + c menjadi
+(x − p)(x − q) = 0, maka x = p atau x = q.
+
+## Contoh Terpandu
+
+**Contoh 1 (pemfaktoran).** Selesaikan x² − 5x + 6 = 0.
+Langkah 1: cari dua angka yang dikali = 6 dan dijumlah = −5. Itu −2 dan −3.
+Langkah 2: faktorkan: (x − 2)(x − 3) = 0.
+Langkah 3: x − 2 = 0 atau x − 3 = 0, jadi x = 2 atau x = 3.
+Cek x = 2: 4 − 10 + 6 = 0. Benar.
+
+**Contoh 2 (rumus abc).** Selesaikan x² + 4x + 4 = 0.
+Di sini a = 1, b = 4, c = 4.
+Langkah 1: D = 4² − 4 × 1 × 4 = 16 − 16 = 0 → satu akar kembar.
+Langkah 2: x = (−4 ± √0) / 2 = −4 / 2 = −2.
+Jawaban: x = −2 (kembar).
+
+**Contoh 3 (tanpa akar real).** x² + x + 1 = 0.
+D = 1² − 4 × 1 × 1 = 1 − 4 = −3 < 0, jadi tidak ada akar real.
+
+**Contoh 4 (soal cerita).** Kebun Pak RT berbentuk persegi panjang.
+Panjangnya 3 meter lebih dari lebarnya, dan luasnya 40 m². Berapa
+lebarnya?
+Langkah 1: misalkan lebar = x, maka panjang = x + 3. Luas: x(x + 3) = 40.
+Langkah 2: jabarkan: x² + 3x − 40 = 0.
+Langkah 3: faktorkan — cari dua angka yang dikali = −40 dan dijumlah = 3.
+Itu 8 dan −5: (x + 8)(x − 5) = 0.
+Langkah 4: x = −8 atau x = 5. Lebar tidak mungkin negatif, jadi x = 5.
+Jawaban: lebar 5 m (panjang 8 m). Cek: 5 × 8 = 40. Tepat!
+
+## Kesalahpahaman Umum
+
+**"Persamaan kuadrat selalu punya dua jawaban."** Tidak. Contoh 2 hanya
+punya satu (kembar), contoh 3 tidak punya akar real. Selalu cek
+diskriminan dulu.
+
+**"Lupa syarat a ≠ 0."** Kalau a = 0, sukunya hilang dan soalnya bukan
+kuadrat lagi. Jangan paksakan rumus abc.
+
+**"Salah tanda di rumus abc."** Kesalahan klasik: menulis −b sebagai b,
+atau lupa membagi dengan 2a (bukan hanya 2). Tulis a, b, c dengan tandanya
+dulu sebelum menghitung.
+
+## Di Dunia Nyata
+
+Insinyur memakai persamaan kuadrat untuk merancang lintasan proyektil,
+jembatan lengkung, dan lampu sorot (reflektor parabola memfokuskan cahaya
+ke satu titik — dipakai di senter dan antena parabola). Petani menghitung
+ukuran kandang dengan luas tertentu. Bahkan keuntungan maksimum sebuah
+usaha sering terletak di puncak parabola.
+
+## Ringkasan
+
+- Bentuk umum ax² + bx + c = 0 dengan a ≠ 0; grafiknya parabola.
+- Diskriminan D = b² − 4ac menentukan jumlah akar real: 2, 1, atau 0.
+- Rumus abc selalu bisa dipakai; pemfaktoran lebih cepat bila memungkinkan.
+- Selalu tulis a, b, c beserta tandanya, dan cek jawaban dengan substitusi.
+- Parabola muncul di fisika (gerak proyektil), teknik, dan ekonomi.

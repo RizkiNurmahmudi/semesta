@@ -1,0 +1,100 @@
+---
+id: mat-turunan
+level: L5
+domain: matematika
+topic: kalkulus
+title: Turunan
+prerequisites: [mat-limit]
+estMinutes: 30
+simulations: [sim-turunan]
+caseStudies: []
+version: 1
+---
+
+## Intuisi
+
+Dalam cerita "Speedometer Dimas", Dimas naik motor menempuh 60 km dalam 1 jam — kecepatan rata-ratanya 60 km/jam. Tetapi speedometer menunjukkan 80 km/jam di satu saat, 40 km/jam di saat lain. Berapa kecepatan **tepat pada detik ini**? Kecepatan rata-rata butuh selang waktu; kecepatan sesaat butuh selang waktu yang **mendekati nol** — dan itulah turunan: **laju perubahan sesaat**.
+
+## Konsep Inti
+
+**Turunan** f'(x) (dibaca "f aksen x") dari fungsi f(x) adalah:
+
+1. **Kemiringan garis singgung** kurva di titik x — secara geometri.
+2. **Laju perubahan sesaat** — secara fisika (kecepatan = turunan posisi).
+
+Definisi (dari limit!):
+
+f'(x) = lim(h→0) [f(x + h) − f(x)] / h
+
+Bacanya: kemiringan garis yang menghubungkan dua titik yang jaraknya mendekati nol sama dengan kemiringan garis singgung.
+
+**Aturan dasar** (tidak perlu menurunkan dari definisi setiap kali):
+
+- Fungsi konstan: d/dx[c] = 0
+- Pangkat: d/dx[xⁿ] = n·xⁿ⁻¹
+- Jumlah: d/dx[f + g] = f' + g'
+- Kali konstanta: d/dx[c·f] = c·f'
+- Hasil kali: d/dx[f·g] = f'·g + f·g'
+- Trigonometri: d/dx[sin x] = cos x; d/dx[cos x] = −sin x
+- Eksponen: d/dx[eˣ] = eˣ (tetap sama!)
+
+**Aturan rantai**: d/dx[f(g(x))] = f'(g(x)) · g'(x) — "turunan luar kali turunan dalam".
+
+**Aplikasi**: f'(x) = 0 memberi titik stasioner (kandidat maksimum/minimum) — kunci optimasi!
+
+## Rumus
+
+- Definisi: f'(x) = lim(h→0) [f(x+h) − f(x)]/h
+- d/dx[xⁿ] = n·xⁿ⁻¹
+- d/dx[sin x] = cos x; d/dx[cos x] = −sin x; d/dx[eˣ] = eˣ
+- Aturan rantai: d/dx[f(g(x))] = f'(g(x)) · g'(x)
+- Titik stasioner: f'(x) = 0 → uji maksimum/minimum
+- Notasi Leibniz: dy/dx
+
+## Contoh Terpandu
+
+**Contoh 1 — Dari definisi.** f(x) = x². Buktikan f'(x) = 2x!
+
+[f(x+h) − f(x)]/h = [(x+h)² − x²]/h = [2xh + h²]/h = 2x + h. Limit h→0 menghasilkan 2x (benar).
+
+**Contoh 2 — Aturan pangkat.** f(x) = 3x⁴ − 2x² + 5x − 7.
+
+f'(x) = 12x³ − 4x + 5. (Turunan konstanta −7 adalah 0.)
+
+**Contoh 3 — Kecepatan sesaat.** Posisi motor Dimas: s(t) = 5t² (meter, t dalam detik). Kecepatan saat t = 3?
+
+v(t) = s'(t) = 10t → v(3) = 30 m/s = 108 km/jam. (Awas ngebut, Dimas!)
+
+**Contoh 4 — Optimasi kandang.** Kakek punya 40 m bambu untuk kandang persegipanjang. Ukuran berapa agar luas maksimum?
+
+Misal lebar x, maka panjang = 20 − x. Luas L = x(20 − x) = 20x − x². L' = 20 − 2x = 0 → x = 10 m. Jadi kandang 10 m × 10 m (persegi!), luas maksimum 100 m².
+
+**Contoh 5 — Aturan rantai.** Tentukan turunan f(x) = sin(x²)!
+
+Fungsi luar = sin(u), fungsi dalam u = x². f'(x) = cos(x²) · 2x = 2x·cos(x²). Tanpa aturan rantai, fungsi bertingkat seperti ini sulit diturunkan.
+
+**Turunan kedua dan kecekungan.** Turunan dari turunan disebut turunan kedua, f''(x). Jika f''(x) > 0, kurva cekung ke atas (seperti mangkuk ∪) dan titik stasioner adalah minimum; jika f''(x) < 0, cekung ke bawah (∩) dan titik stasioner adalah maksimum. Contoh: f(x) = x² → f''(x) = 2 > 0, jadi x = 0 adalah minimum (benar!).
+
+**Contoh 6 — Laju terkait.** Balon bola ditiup sehingga jari-jarinya bertambah 2 cm/s. Seberapa cepat volumenya bertambah saat r = 10 cm?
+
+V = ⁴⁄₃πr³ → dV/dt = 4πr² · dr/dt (aturan rantai!). Saat r = 10: dV/dt = 4π × 100 × 2 = 800π ≈ 2.512 cm³/s. Inilah "related rates": laju satu besaran menentukan laju besaran lain yang terkait.
+
+## Kesalahpahaman Umum
+
+- **"Turunan = kemiringan rata-rata."** Bukan — turunan adalah kemiringan **sesaat** (garis singgung), sedangkan [f(b)−f(a)]/(b−a) adalah kemiringan rata-rata (garis potong).
+- **"d/dx[c] = c."** Salah — turunan konstanta = 0. Konstanta tidak berubah, lajunya nol.
+- **"d/dx[f·g] = f'·g'."** Salah! Yang benar f'·g + f·g'. Contoh: d/dx[x²·x³] = 2x·x³ + x²·3x² = 5x⁴ (benar) (sama dengan d/dx[x⁵]).
+- **"f'(x) = 0 selalu berarti maksimum."** Belum tentu — bisa minimum atau titik belok. Uji dengan tanda f' di sekitarnya atau turunan kedua.
+
+## Di Dunia Nyata
+
+Insinyur memakai turunan untuk merancang jalan tol: kemiringan tanjakan tidak boleh berubah terlalu tiba-tiba (turunan kedua = kelengkungan!). Ekonom mencari keuntungan maksimum dengan turunan. Dokter memakai laju perubahan untuk menentukan dosis obat. Bahkan kecerdasan buatan belajar dengan "menuruni" gradien — turunan dalam dimensi banyak!
+
+## Ringkasan
+
+- Turunan = laju sesaat = kemiringan garis singgung.
+- Definisi limit: f'(x) = lim(h→0) [f(x+h)−f(x)]/h.
+- Aturan kilat: pangkat (n·xⁿ⁻¹), sin→cos, cos→−sin, eˣ tetap.
+- f'(x) = 0 → kandidat maksimum/minimum (optimasi).
+- Kecepatan = turunan posisi; percepatan = turunan kecepatan.
+- Waspada: turunan hasil kali bukan kali turunan!

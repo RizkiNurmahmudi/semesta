@@ -1,0 +1,110 @@
+---
+id: fis-gerak-melingkar
+level: L4
+domain: fisika
+topic: mekanika
+title: Gerak Melingkar
+prerequisites: [fis-newton, mat-trigonometri-dasar]
+estMinutes: 25
+simulations: [sim-melingkar]
+caseStudies: []
+version: 1
+---
+
+## Intuisi
+
+Di pasar malam, Kirana naik komidi putar. Makin kencang putarannya, makin
+kuat tubuhnya terasa "terlempar" ke luar — ia harus berpegangan erat.
+Padahal tidak ada yang mendorongnya keluar. Apa yang sebenarnya terjadi?
+
+Kuncinya: benda yang bergerak melingkar sebenarnya **selalu dibelokkan
+dari jalan lurusnya**. Tanpa sesuatu yang menariknya ke pusat lingkaran,
+benda akan meluncur lurus (ingat Hukum I Newton). "Terlempar keluar"
+hanyalah perasaan — yang nyata adalah tarikan ke dalam yang menahanmu
+tetap di lingkaran. Tarikan inilah yang disebut gaya sentripetal.
+
+## Konsep Inti
+
+- **Kecepatan sudut (ω)**: seberapa cepat sudut ditempuh, satuannya
+  radian per detik (rad/s). Satu putaran penuh = 2π radian ≈ 6,28 radian.
+- **Hubungan dengan kecepatan linear**: v = ω × r. Titik yang lebih jauh
+  dari pusat (r besar) bergerak linear lebih cepat walau ω-nya sama —
+  itulah kenapa duduk di tepi komidi putar terasa lebih kencang.
+- **Percepatan sentripetal (a_c)**: percepatan yang selalu mengarah ke
+  pusat lingkaran, besarnya a_c = v² ÷ r = ω² × r. Percepatan ini yang
+  terus-menerus membelokkan arah kecepatan (besar kecepatan bisa tetap!).
+- **Gaya sentripetal (F_c)**: gaya nyata yang menyebabkan percepatan
+  sentripetal: F_c = m × v² ÷ r. Pada komidi putar, gaya ini berasal dari
+  pegangan tanganmu; pada mobil menikung, dari gesekan ban.
+- **Periode (T)** dan **frekuensi (f)**: T adalah waktu satu putaran
+  (detik), f = 1 ÷ T adalah jumlah putaran per detik (Hz). Hubungan
+  dengan kecepatan sudut: ω = 2π ÷ T = 2π × f.
+
+## Rumus
+
+Satuan SI: sudut dalam radian (rad), ω dalam rad/s, v dalam m/s,
+r dalam meter, gaya dalam newton (N).
+
+- **Kecepatan sudut**: ω = 2π ÷ T — dibaca "omega sama dengan dua pi
+  dibagi periode".
+- **Kecepatan linear**: v = ω × r.
+- **Percepatan sentripetal**: a_c = v² ÷ r = ω² × r — selalu menuju pusat.
+- **Gaya sentripetal**: F_c = m × v² ÷ r — gaya nyata penahan gerak
+  melingkar.
+
+## Contoh Terpandu
+
+**Contoh 1 — Yoyo Dimas.**
+Yoyo diputar dengan tali sepanjang r = 0,5 m, satu putaran tiap T = 2 s.
+Kecepatan sudut: ω = 2π ÷ 2 = π ≈ 3,14 rad/s.
+Kecepatan linear yoyo: v = ω × r = 3,14 × 0,5 = 1,57 m/s.
+Percepatan sentripetal: a_c = v² ÷ r = 1,57² ÷ 0,5 = 2,4649 ÷ 0,5 ≈
+4,93 m/s² — mengarah ke tangan Dimas di pusat lingkaran.
+
+**Contoh 2 — Gaya pada tali.**
+Yoyo bermassa 2 kg (yoyo raksasa mainan). Berapa tegangan tali?
+F_c = m × a_c = 2 × 4,93 = 9,86 N ≈ 9,9 N. Tali harus menahan hampir
+10 N — kalau tali putus, yoyo tidak "terlempar keluar", melainkan
+meluncur lurus ke arah garis singgung saat itu juga (Hukum I Newton).
+
+**Contoh 3 — Komidi putar dipercepat dua kali.**
+Jika putaran dijadikan dua kali lebih cepat (ω menjadi 2×), gaya
+sentripetal menjadi 4× lipat karena F_c sebanding dengan ω². Inilah
+alasan wahana berputar terasa jauh lebih "liar" saat dipercepat sedikit.
+
+## Kesalahpahaman Umum
+
+1. **"Ada gaya sentrifugal yang melempar keluar."**
+   Tidak ada gaya sentrifugal dalam kerangka diam — itu hanya perasaan
+   akibat kelembaman (Hukum I). Gaya yang nyata hanyalah gaya sentripetal
+   yang menarik ke dalam. Istilah "sentrifugal" hanya muncul bila kamu
+   menghitung dari sudut pandang benda yang berputar.
+
+2. **"Percepatan berarti makin cepat."**
+   Pada gerak melingkar beraturan, besar kecepatan tetap tetapi arahnya
+   terus berubah — dan perubahan arah pun adalah percepatan. Percepatan
+   tidak selalu soal laju.
+
+3. **"Makin besar lingkaran makin kecil gaya."**
+   Hanya benar jika kecepatan linear sama (F_c = m × v² ÷ r). Jika yang
+   sama adalah kecepatan sudutnya (seperti komidi putar), lingkaran lebih
+   besar justru butuh gaya lebih besar karena F_c = m × ω² × r.
+
+## Di Dunia Nyata
+
+Tikungan jalan raya dibuat miring (banking) agar sebagian gaya normal
+membantu sebagai gaya sentripetal — pembalap MotoGP memiringkan motornya
+dengan prinsip yang sama. Mesin cuci pengering memutar pakaian dengan
+cepat; air terlepas karena tidak ada yang menahannya (bukan karena
+"dilempar"). Satelit mengorbit karena gravitasi berperan sebagai gaya
+sentripetal — jembatan menuju konsep gravitasi.
+
+## Ringkasan
+
+- Gerak melingkar butuh pembelok terus-menerus menuju pusat.
+- ω = 2π ÷ T (rad/s); v = ω × r.
+- Percepatan sentripetal a_c = v² ÷ r, selalu ke pusat.
+- Gaya sentripetal F_c = m × v² ÷ r adalah gaya nyata (tali, gesekan,
+  gravitasi).
+- Tidak ada gaya sentrifugal dalam kerangka diam — itu efek kelembaman.
+- F_c sebanding dengan kuadrat kecepatan sudut: 2× putaran = 4× gaya.

@@ -1,0 +1,106 @@
+---
+id: mat-peluang
+level: L3
+domain: matematika
+topic: data
+title: Peluang Dasar
+prerequisites: [mat-rata-rata, mat-pecahan-rasio]
+estMinutes: 20
+simulations: [sim-peluang]
+caseStudies: []
+version: 1
+---
+
+## Intuisi
+
+Arisan Bu Ratna: 20 nama dikocok dalam toples, satu nama diambil. Setiap
+orang memegang satu kertas nama. Berapa kesempatan ibumu menang? Semua
+nama punya kesempatan sama, dan hanya satu yang keluar — jadi kesempatannya
+1 dari 20.
+
+Peluang adalah cara matematika mengukur **seberapa mungkin** sesuatu
+terjadi. Bukan ramalan — melainkan bahasa yang jujur tentang
+ketidakpastian.
+
+## Konsep Inti
+
+Peluang selalu bernilai antara **0 dan 1**. Peluang 0 artinya mustahil
+(matahari terbit dari barat), peluang 1 artinya pasti (matahari terbit
+dari timur). Selebihnya ditulis sebagai pecahan, desimal, atau persen.
+
+**Ruang sampel** adalah semua hasil yang mungkin. Melempar dadu: {1, 2, 3,
+4, 5, 6} — enam hasil.
+
+**Kejadian majemuk**:
+- Kata "dan" untuk kejadian **independen** (tidak saling memengaruhi):
+  kalikan peluangnya. Contoh: dua koin sama-sama angka.
+- Kata "atau" untuk kejadian **saling lepas** (tidak bisa bersamaan):
+  jumlahkan peluangnya. Contoh: dadu keluar 1 atau 2.
+
+**Frekuensi harapan**: kalau percobaan diulang berkali-kali, hasil akan
+mendekati peluang teori. Ini jembatan antara teori dan kenyataan.
+
+**Komplemen**: peluang "tidak terjadi" adalah 1 dikurangi peluang
+"terjadi". Ditulis **P(bukan A) = 1 − P(A)**. Kadang menghitung yang
+tidak terjadi justru lebih mudah. Peluang dadu TIDAK menunjukkan mata 6
+adalah 1 − 1/6 = 5/6 — jauh lebih cepat daripada menghitung mata
+1, 2, 3, 4, 5 satu per satu.
+
+## Rumus
+
+**P(A) = n(A) / n(S)** — "peluang kejadian A sama dengan banyak hasil yang
+diinginkan dibagi banyak semua hasil yang mungkin."
+
+**Frekuensi harapan: Fh = P(A) × (banyak percobaan).**
+
+## Contoh Terpandu
+
+**Contoh 1.** Peluang dadu menunjukkan mata 6.
+n(A) = 1 (hanya mata 6), n(S) = 6. P = 1/6 ≈ 0,167.
+
+**Contoh 2.** Peluang dadu menunjukkan mata genap.
+Hasil yang diinginkan: {2, 4, 6} → n(A) = 3. P = 3/6 = 1/2.
+
+**Contoh 3 (kejadian "dan").** Peluang dua koin sama-sama angka.
+P(angka) = 1/2 untuk tiap koin, dan keduanya independen.
+P = 1/2 × 1/2 = 1/4.
+
+**Contoh 4 (frekuensi harapan).** Dadu dilempar 60 kali. Berapa kali
+mata 6 diharapkan muncul?
+Fh = 1/6 × 60 = 10 kali. Ini harapan, bukan jaminan — bisa 8, bisa 12.
+
+**Contoh 5 (komplemen).** Sebuah kantong berisi 3 kelereng merah dan
+7 kelereng biru. Diambil satu secara acak. Berapa peluang BUKAN merah?
+Langkah 1: P(merah) = 3/10.
+Langkah 2: P(bukan merah) = 1 − 3/10 = 7/10.
+Cek langsung: kelereng biru ada 7 dari 10 → 7/10. Sama!
+
+## Kesalahpahaman Umum
+
+**"Sudah lima kali tidak keluar, pasti keluar berikutnya."** Salah besar.
+Dadu tidak punya ingatan. Setiap lemparan independen — peluang mata 6
+tetap 1/6, apa pun yang terjadi sebelumnya. Ini disebut kekeliruan
+penjudi (gambler's fallacy).
+
+**"Peluang 1/2 berarti pasti terjadi sekali dari dua percobaan."** Tidak.
+Peluang adalah kecenderungan jangka panjang. Dari dua lemparan koin,
+bisa saja keduanya gambar.
+
+**"Peluang 'atau' selalu dijumlahkan."** Hanya untuk kejadian saling
+lepas. Peluang "genap atau lebih dari 4" pada dadu tidak bisa langsung
+3/6 + 2/6, karena mata 6 dihitung dua kali — jawabannya 4/6 = 2/3.
+
+## Di Dunia Nyata
+
+Perusahaan asuransi menghitung peluang kecelakaan untuk menentukan premi.
+Prakiraan cuaca "70% hujan" adalah peluang. Undian, permainan, bahkan
+keputusan bisnis memakai bahasa yang sama: bukan kepastian, melainkan
+ukuran ketidakpastian yang jujur.
+
+## Ringkasan
+
+- Peluang bernilai 0–1; P(A) = hasil diinginkan ÷ semua hasil mungkin.
+- "Dan" untuk kejadian independen → kalikan; "atau" untuk saling lepas → jumlahkan.
+- Frekuensi harapan = peluang × banyak percobaan (harapan, bukan jaminan).
+- Tiap percobaan acak independen — masa lalu tidak mengubah peluang.
+- Waspadai kejadian yang tumpang tindih saat menjumlahkan peluang.

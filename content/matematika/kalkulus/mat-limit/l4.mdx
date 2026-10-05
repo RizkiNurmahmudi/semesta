@@ -1,0 +1,77 @@
+---
+id: mat-limit
+level: L4
+domain: matematika
+topic: kalkulus
+title: Limit Intuitif
+prerequisites: [mat-fungsi-grafik, mat-barisan-deret]
+estMinutes: 25
+simulations: [sim-limit]
+caseStudies: []
+version: 1
+---
+
+## Intuisi
+
+Dalam cerita "Mendekati Tanpa Sampai", Kirana berdiri 8 meter dari Kakek. Ia melangkah setengah dari sisa jarak: 4 m, lalu 2 m, lalu 1 m, 0,5 m... Ia makin dekat tetapi — secara teori — tak pernah sampai! Namun kita bisa menjawab dengan pasti: ia **mendekati** Kakek, dan jaraknya **mendekati** 0. Limit adalah matematika tentang "mendekati": nilai yang dituju suatu proses, walaupun tak pernah benar-benar dicapai.
+
+## Konsep Inti
+
+**Limit barisan**: barisan a₁, a₂, a₃, ... punya limit L jika suku-sukunya makin dekat ke L. Contoh: 1/2, 1/4, 1/8, ... → limitnya 0. Ditulis lim(n→∞) 1/2ⁿ = 0.
+
+**Limit fungsi**: lim(x→a) f(x) = L artinya nilai f(x) makin dekat ke L saat x makin dekat ke a — **tanpa peduli** berapa f(a) sebenarnya, bahkan jika f(a) tidak ada!
+
+Tiga situasi penting:
+
+1. **Limit biasa**: lim(x→2) (x + 1) = 3. Substitusi langsung bisa dipakai.
+2. **Bentuk 0/0**: lim(x→2) (x² − 4)/(x − 2). Substitusi memberi 0/0 (tak tentu!) — tetapi faktorkan: (x−2)(x+2)/(x−2) = x + 2, sehingga limitnya 4.
+3. **Limit tak hingga**: 1/2 + 1/4 + 1/8 + ... = 1. Deret tak hingga bisa punya jumlah berhingga!
+
+**Kontinuitas** (intuitif): fungsi kontinu jika grafiknya bisa digambar tanpa mengangkat pensil — artinya lim(x→a) f(x) = f(a) untuk setiap a.
+
+## Rumus
+
+- lim(x→a) [f(x) + g(x)] = lim f(x) + lim g(x) (limit jumlah = jumlah limit)
+- lim(x→a) [f(x) · g(x)] = lim f(x) · lim g(x)
+- lim(x→a) c = c dan lim(x→a) x = a (c konstanta)
+- lim(x→∞) 1/xⁿ = 0 untuk n > 0
+- Jumlah deret geometri tak hingga (|r| < 1): S = a / (1 − r)
+- Cara membaca "lim(x→a) f(x) = L": "limit f(x) untuk x mendekati a sama dengan L"
+
+## Contoh Terpandu
+
+**Contoh 1 — Langkah Kirana.** Sisa jarak setelah n langkah: 8 × (1/2)ⁿ. Maka lim(n→∞) 8/2ⁿ = 0. Kirana "sampai" dalam arti limit!
+
+**Contoh 2 — Bentuk 0/0.** Hitung lim(x→2) (x² − 4)/(x − 2).
+
+x = 2 membuat penyebut nol — jangan substitusi! Faktorkan pembilang: (x − 2)(x + 2)/(x − 2) = x + 2 (untuk x ≠ 2). Maka limit = 2 + 2 = 4.
+
+**Contoh 3 — Deret kue.** Kirana makan 1/2 kue, lalu 1/4, lalu 1/8, dan seterusnya. Berapa total yang dimakan?
+
+Deret geometri dengan a = 1/2, r = 1/2: S = (1/2)/(1 − 1/2) = 1. Tepat satu kue utuh!
+
+**Contoh 4 — Cek kontinuitas.** f(x) = (x² − 4)/(x − 2) di x = 2: f(2) tidak ada (0/0), tetapi limitnya 4 — jadi ada "lubang" di grafik, fungsi tak kontinu di x = 2.
+
+**Contoh 5 — Limit di tak hingga.** Hitung lim(x→∞) (3x² + 2)/(x² − 1).
+
+Bagi pembilang dan penyebut dengan x² (pangkat tertinggi): (3 + 2/x²)/(1 − 1/x²). Saat x → ∞, 2/x² → 0 dan 1/x² → 0, sehingga limit = 3/1 = 3. Trik ini bekerja untuk semua fungsi rasional: bandingkan pangkat tertinggi pembilang vs penyebut!
+
+## Kesalahpahaman Umum
+
+- **"Limit = nilai fungsinya."** Belum tentu! Limit peduli nilai di **sekitar** a, bukan di a. Contoh di atas: limitnya 4 tetapi f(2) tidak ada.
+- **"0/0 = 0 atau = 1."** 0/0 itu **tak tentu** — harus diolah dulu (faktorisasi). Hasilnya bisa apa saja (di contoh: 4).
+- **"Deret tak hingga pasti tak hingga jumlahnya."** Tidak — deret geometri dengan |r| < 1 berjumlah berhingga (contoh kue = 1).
+- **"Limit hanya untuk soal sulit."** Limit adalah fondasi turunan dan integral — memahaminya secara intuitif membuat kalkulus jauh lebih mudah.
+
+## Di Dunia Nyata
+
+Konsep "mendekati" dipakai di mana-mana: kamera HP menghitung fokus dengan iterasi yang makin mendekati ketajaman; animasi game menghaluskan gerakan dengan limit; bank menghitung bunga majemuk kontinu memakai limit (itulah asal bilangan e ≈ 2,718!). Filsuf Yunani Zeno merenungkan paradoks "setengah jarak" Kirana ini 2.500 tahun lalu — dan kalkulus adalah jawabannya.
+
+## Ringkasan
+
+- Limit = nilai yang dituju, bukan nilai yang dicapai.
+- lim(x→a) f(x) melihat sekitar a, bukan f(a).
+- 0/0 tak tentu: faktorkan dan olah dulu, jangan menyerah.
+- Deret geometri |r| < 1: S = a/(1−r) — tak hingga suku bisa berjumlah berhingga.
+- Fungsi kontinu: grafik tanpa angkat pensil ⟺ lim(x→a) f(x) = f(a).
+- Limit adalah pintu masuk turunan dan integral.

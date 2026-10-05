@@ -15,7 +15,82 @@ version: 1
 
 ## Intuisi
 
-Gerak parabola adalah gabungan dua gerak yang berjalan bersamaan:
-gerak lurus beraturan (horizontal) dan gerak jatuh bebas (vertikal).
+Kirana melempar bola basket ke arah ring. Ia melempar lurus dan kuat —
+tetapi bola melengkung turun sebelum sampai. Kakek lalu menyuruhnya
+melempar lebih miring ke atas, dan bola pun masuk ring dengan indah!
 
-> Konten lengkap ditulis di M1/M2 mengikuti template PRD 6.3.
+Kenapa lintasannya melengkung? Karena bola melakukan **dua gerak
+sekaligus**: ke depan dengan kecepatan yang hampir tetap (seperti gerak
+lurus beraturan), dan ke bawah yang makin cepat karena ditarik gravitasi
+(seperti jatuh bebas). Gabungan "maju tetap + jatuh makin cepat" inilah
+yang menggambar lengkungan indah bernama **parabola**.
+
+## Konsep Inti
+
+- **Gerak parabola** adalah gerak benda yang dilempar miring: gerak
+  horizontal beraturan (kecepatan mendatar tetap, tanpa hambatan udara)
+  digabung gerak vertikal berubah beraturan (dipengaruhi gravitasi).
+- **Komponen kecepatan awal**: v₀x = v₀ × cos θ (mendatar) dan
+  v₀y = v₀ × sin θ (tegak). Sudut θ diukur dari arah mendatar.
+- **Titik tertinggi**: kecepatan vertikal sesaat nol, tetapi kecepatan
+  horizontal tetap ada — bola tidak pernah berhenti total di udara.
+- **Sudut 45° memberi jangkauan terjauh** untuk kecepatan awal yang sama
+  (tanpa hambatan udara). Sudut 30° dan 60° memberi jarak yang sama
+  karena sin(2θ)-nya sama.
+- **Simetri**: waktu naik sama dengan waktu turun; kecepatan saat
+  mendarat sama besar dengan kecepatan awal (berlawanan arah vertikal).
+
+## Rumus
+
+Satuan SI: jarak dalam meter, waktu dalam detik, kecepatan dalam m/s,
+sudut θ dalam derajat, g = 9,8 m/s².
+
+- **Jangkauan**: R = v₀² × sin(2θ) ÷ g — dibaca "jangkauan sama dengan
+  kecepatan awal kuadrat kali sinus dua teta dibagi g".
+- **Tinggi maksimum**: H = v₀² × sin²θ ÷ (2 × g).
+- **Waktu melayang**: t = 2 × v₀ × sin θ ÷ g.
+
+## Contoh Terpandu
+
+**Contoh 1 — Jangkauan lemparan Kirana.**
+Kirana melempar dengan v₀ = 20 m/s pada sudut θ = 45°.
+sin(2θ) = sin(90°) = 1.
+R = 20² × 1 ÷ 9,8 = 400 ÷ 9,8 ≈ 40,8 m.
+Persis seperti target di simulator!
+
+**Contoh 2 — Tinggi maksimum.**
+Dengan lemparan yang sama, berapa tinggi maksimumnya?
+sin(45°) ≈ 0,7071, sehingga sin²(45°) = 0,5.
+H = 20² × 0,5 ÷ (2 × 9,8) = 200 ÷ 19,6 ≈ 10,2 m.
+Waktu melayangnya: t = 2 × 20 × 0,7071 ÷ 9,8 ≈ 28,28 ÷ 9,8 ≈ 2,89 detik.
+
+## Kesalahpahaman Umum
+
+1. **"Bola berhenti sesaat di titik tertinggi."**
+   Tidak sepenuhnya. Yang nol hanya kecepatan *vertikal*; kecepatan
+   *horizontal* tetap berjalan. Bola terus maju walau sesaat tidak naik.
+
+2. **"Makin besar sudut selalu makin jauh."**
+   Salah. Jangkauan maksimum di 45°; sudut 60° justru lebih dekat
+   daripada 45° karena sin(2θ) mengecil setelah 90°.
+
+3. **"Gerak horizontal ikut melambat karena gravitasi."**
+   Salah. Gravitasi hanya menarik ke bawah. Tanpa hambatan udara,
+   kecepatan mendatar tidak berubah selama penerbangan.
+
+## Di Dunia Nyata
+
+Atlet tolak peluru dan lempar lembing mengincar sudut sekitar 40–45°.
+Penjaga gawang menendang bola jauh dengan sudut miring, bukan lurus ke
+depan. Petani yang menyemprot tanaman mengatur sudut semprotan agar
+menjangkau barisan terjauh. Bahkan air mancur di taman kota dirancang
+dengan fisika parabola agar jatuhnya indah dan tepat.
+
+## Ringkasan
+
+- Gerak parabola = GLB horizontal + jatuh bebas vertikal.
+- v₀x = v₀ × cos θ; v₀y = v₀ × sin θ.
+- R = v₀² × sin(2θ) ÷ g; H = v₀² × sin²θ ÷ (2 × g); t = 2 × v₀ × sin θ ÷ g.
+- Sudut 45° memberi jangkauan terjauh (tanpa hambatan udara).
+- Di titik tertinggi kecepatan vertikal nol, horizontal tetap.
+- Satuan SI: meter, detik, m/s; g = 9,8 m/s².

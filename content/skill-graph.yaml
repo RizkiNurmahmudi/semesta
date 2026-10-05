@@ -1,11 +1,113 @@
 # Graf konsep & prasyarat (PRD 6.4). Divalidasi tools/build-content.
+# 46 konsep — selaras dengan docs/KURIKULUM.md (2026-10-05).
 concepts:
+  # ---- Matematika: Bilangan & Operasi ----
+  - id: mat-membilang
+    title: Membilang & Membandingkan
+    domain: matematika
+    topic: bilangan
+    keywords: [membilang, perbandingan, urutan]
+    prerequisites: []
+
+  - id: mat-tambah-kurang
+    title: Penjumlahan & Pengurangan
+    domain: matematika
+    topic: bilangan
+    keywords: [penjumlahan, pengurangan, soal cerita]
+    prerequisites: [mat-membilang]
+
+  - id: mat-kali-bagi
+    title: Perkalian & Pembagian
+    domain: matematika
+    topic: bilangan
+    keywords: [perkalian, pembagian, tabel]
+    prerequisites: [mat-tambah-kurang]
+
   - id: mat-pecahan-rasio
     title: Pecahan & Rasio
     domain: matematika
     topic: bilangan
     keywords: [pecahan, rasio, persen]
+    prerequisites: [mat-kali-bagi]
+
+  - id: mat-desimal-persen
+    title: Desimal & Persen
+    domain: matematika
+    topic: bilangan
+    keywords: [desimal, persen, diskon]
+    prerequisites: [mat-pecahan-rasio]
+
+  - id: mat-pangkat-akar
+    title: Pangkat & Akar
+    domain: matematika
+    topic: bilangan
+    keywords: [pangkat, akar, notasi ilmiah]
+    prerequisites: [mat-desimal-persen]
+
+  - id: mat-barisan-deret
+    title: Barisan & Deret
+    domain: matematika
+    topic: bilangan
+    keywords: [barisan, deret, pola bilangan]
+    prerequisites: [mat-pangkat-akar]
+
+  # ---- Matematika: Aljabar ----
+  - id: mat-pola-simbol
+    title: Pola & Simbol
+    domain: matematika
+    topic: aljabar
+    keywords: [pola, simbol, variabel intuitif]
+    prerequisites: [mat-tambah-kurang]
+
+  - id: mat-persamaan-linear
+    title: Persamaan Linear
+    domain: matematika
+    topic: aljabar
+    keywords: [persamaan, variabel, linear]
+    prerequisites: [mat-pecahan-rasio, mat-pola-simbol]
+
+  - id: mat-persamaan-kuadrat
+    title: Persamaan Kuadrat
+    domain: matematika
+    topic: aljabar
+    keywords: [kuadrat, pemfaktoran, diskriminan]
+    prerequisites: [mat-persamaan-linear, mat-pangkat-akar]
+
+  - id: mat-sistem-persamaan
+    title: Sistem Persamaan
+    domain: matematika
+    topic: aljabar
+    keywords: [spldv, substitusi, eliminasi]
+    prerequisites: [mat-persamaan-linear]
+
+  - id: mat-fungsi-grafik
+    title: Fungsi & Grafik
+    domain: matematika
+    topic: aljabar
+    keywords: [fungsi, grafik, domain]
+    prerequisites: [mat-persamaan-kuadrat]
+
+  # ---- Matematika: Geometri & Pengukuran ----
+  - id: mat-bentuk
+    title: Bentuk & Ruang
+    domain: matematika
+    topic: geometri
+    keywords: [bentuk, bangun datar, posisi]
     prerequisites: []
+
+  - id: mat-luas-keliling
+    title: Keliling & Luas
+    domain: matematika
+    topic: geometri
+    keywords: [keliling, luas, satuan]
+    prerequisites: [mat-kali-bagi, mat-bentuk]
+
+  - id: mat-pythagoras
+    title: Teorema Pythagoras
+    domain: matematika
+    topic: geometri
+    keywords: [pythagoras, segitiga siku-siku]
+    prerequisites: [mat-luas-keliling, mat-pangkat-akar]
 
   - id: mat-trigonometri-dasar
     title: Trigonometri Dasar
@@ -13,6 +115,86 @@ concepts:
     topic: geometri
     keywords: [sinus, cosinus, sudut]
     prerequisites: [mat-pecahan-rasio]
+
+  - id: mat-bangun-ruang
+    title: Bangun Ruang
+    domain: matematika
+    topic: geometri
+    keywords: [volume, kubus, balok, tabung]
+    prerequisites: [mat-luas-keliling, mat-pangkat-akar]
+
+  - id: mat-geometri-analitik
+    title: Geometri Analitik
+    domain: matematika
+    topic: geometri
+    keywords: [koordinat, gradien, garis]
+    prerequisites: [mat-fungsi-grafik, mat-trigonometri-dasar]
+
+  # ---- Matematika: Data, Statistika & Peluang ----
+  - id: mat-baca-grafik
+    title: Membaca Grafik
+    domain: matematika
+    topic: data
+    keywords: [diagram, grafik batang, membaca data]
+    prerequisites: [mat-membilang]
+
+  - id: mat-rata-rata
+    title: Rata-rata & Diagram
+    domain: matematika
+    topic: data
+    keywords: [mean, median, modus]
+    prerequisites: [mat-baca-grafik, mat-pecahan-rasio]
+
+  - id: mat-peluang
+    title: Peluang Dasar
+    domain: matematika
+    topic: data
+    keywords: [peluang, frekuensi harapan]
+    prerequisites: [mat-rata-rata, mat-pecahan-rasio]
+
+  - id: mat-statistika
+    title: Statistika
+    domain: matematika
+    topic: data
+    keywords: [distribusi, histogram, kuartil]
+    prerequisites: [mat-peluang]
+
+  # ---- Matematika: Kalkulus (tahap lanjut) ----
+  - id: mat-limit
+    title: Limit Intuitif
+    domain: matematika
+    topic: kalkulus
+    keywords: [limit, mendekati]
+    prerequisites: [mat-fungsi-grafik, mat-barisan-deret]
+
+  - id: mat-turunan
+    title: Turunan
+    domain: matematika
+    topic: kalkulus
+    keywords: [turunan, laju sesaat, kemiringan]
+    prerequisites: [mat-limit]
+
+  - id: mat-integral
+    title: Integral
+    domain: matematika
+    topic: kalkulus
+    keywords: [integral, luas, akumulasi]
+    prerequisites: [mat-turunan]
+
+  # ---- Fisika: Mekanika ----
+  - id: fis-dorong-tarik
+    title: Dorong & Tarik
+    domain: fisika
+    topic: mekanika
+    keywords: [gaya intuitif, gerak, dorongan]
+    prerequisites: []
+
+  - id: fis-jarak-waktu
+    title: Jarak, Waktu & Kecepatan
+    domain: fisika
+    topic: mekanika
+    keywords: [jarak, waktu, kecepatan]
+    prerequisites: [mat-tambah-kurang]
 
   - id: fis-gerak-lurus
     title: Gerak Lurus
@@ -27,3 +209,126 @@ concepts:
     topic: mekanika
     keywords: [proyektil, sudut, jangkauan]
     prerequisites: [fis-gerak-lurus, mat-trigonometri-dasar]
+
+  - id: fis-newton
+    title: Gaya & Hukum Newton
+    domain: fisika
+    topic: mekanika
+    keywords: [gaya, newton, gesekan]
+    prerequisites: [fis-gerak-lurus]
+
+  - id: fis-usaha-energi
+    title: Usaha & Energi
+    domain: fisika
+    topic: mekanika
+    keywords: [usaha, energi kinetik, energi potensial]
+    prerequisites: [fis-newton]
+
+  - id: fis-momentum
+    title: Momentum & Tumbukan
+    domain: fisika
+    topic: mekanika
+    keywords: [momentum, impuls, tumbukan]
+    prerequisites: [fis-newton]
+
+  - id: fis-gerak-melingkar
+    title: Gerak Melingkar
+    domain: fisika
+    topic: mekanika
+    keywords: [sentripetal, kecepatan sudut]
+    prerequisites: [fis-newton, mat-trigonometri-dasar]
+
+  - id: fis-gravitasi
+    title: Gravitasi
+    domain: fisika
+    topic: mekanika
+    keywords: [gravitasi, orbit, planet]
+    prerequisites: [fis-gerak-melingkar]
+
+  # ---- Fisika: Getaran, Gelombang & Bunyi ----
+  - id: fis-bunyi
+    title: Bunyi di Sekitar Kita
+    domain: fisika
+    topic: gelombang
+    keywords: [bunyi, getaran, nada]
+    prerequisites: []
+
+  - id: fis-getaran
+    title: Getaran & Periode
+    domain: fisika
+    topic: gelombang
+    keywords: [getaran, periode, frekuensi, bandul]
+    prerequisites: [fis-bunyi, mat-pecahan-rasio]
+
+  - id: fis-gelombang
+    title: Gelombang
+    domain: fisika
+    topic: gelombang
+    keywords: [gelombang, panjang gelombang, interferensi]
+    prerequisites: [fis-getaran]
+
+  # ---- Fisika: Cahaya & Optik ----
+  - id: fis-bayangan
+    title: Bayangan & Cahaya
+    domain: fisika
+    topic: optik
+    keywords: [cahaya, bayangan, merambat lurus]
+    prerequisites: []
+
+  - id: fis-warna
+    title: Cahaya & Warna
+    domain: fisika
+    topic: optik
+    keywords: [warna, spektrum, pelangi]
+    prerequisites: [fis-bayangan]
+
+  - id: fis-optik
+    title: Cermin & Lensa
+    domain: fisika
+    topic: optik
+    keywords: [cermin, lensa, pemantulan, pembiasan]
+    prerequisites: [fis-warna]
+
+  # ---- Fisika: Listrik & Magnet ----
+  - id: fis-listrik-statis
+    title: Listrik Statis
+    domain: fisika
+    topic: listrik
+    keywords: [muatan, statis, gosokan]
+    prerequisites: []
+
+  - id: fis-rangkaian
+    title: Arus & Rangkaian
+    domain: fisika
+    topic: listrik
+    keywords: [arus, tegangan, hambatan, ohm]
+    prerequisites: [fis-listrik-statis, mat-persamaan-linear]
+
+  - id: fis-magnet
+    title: Magnet & Elektromagnet
+    domain: fisika
+    topic: listrik
+    keywords: [magnet, elektromagnet, kompas]
+    prerequisites: [fis-rangkaian]
+
+  # ---- Fisika: Zat, Suhu & Kalor ----
+  - id: fis-wujud-zat
+    title: Wujud Zat
+    domain: fisika
+    topic: zat
+    keywords: [padat, cair, gas, perubahan wujud]
+    prerequisites: []
+
+  - id: fis-suhu
+    title: Suhu & Termometer
+    domain: fisika
+    topic: zat
+    keywords: [suhu, termometer, celcius]
+    prerequisites: [fis-wujud-zat]
+
+  - id: fis-kalor
+    title: Kalor & Perpindahan
+    domain: fisika
+    topic: zat
+    keywords: [kalor, konduksi, konveksi, radiasi]
+    prerequisites: [fis-suhu, fis-usaha-energi]

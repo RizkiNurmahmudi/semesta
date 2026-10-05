@@ -1,0 +1,123 @@
+---
+id: mat-statistika
+level: L4
+domain: matematika
+topic: data
+title: Statistika
+prerequisites: [mat-peluang]
+estMinutes: 25
+simulations: [sim-statistika]
+caseStudies: []
+version: 1
+---
+
+## Intuisi
+
+Sekolah Dimas mengadakan survei: jajanan apa yang paling laris di kantin?
+Tiga puluh siswa ditanya, jawabannya dicatat, lalu disajikan dalam
+diagram. Kepala sekolah tidak perlu mewawancarai 500 siswa — survei kecil
+yang benar caranya sudah cukup bercerita.
+
+Statistika adalah ilmu **mengumpulkan, menyajikan, dan menarik kesimpulan
+dari data** — termasuk seberapa jauh kesimpulan itu bisa dipercaya. Kalau
+peluang mengukur ketidakpastian satu kejadian, statistika mengukur
+ketidakpastian kesimpulan dari banyak data.
+
+## Konsep Inti
+
+**Populasi** adalah seluruh kelompok yang ingin diketahui (semua siswa),
+sedangkan **sampel** adalah sebagian yang benar-benar diamati (30 siswa).
+Kesimpulan dari sampel hanya valid jika sampelnya **mewakili** populasi
+— acak dan cukup besar.
+
+**Distribusi** menunjukkan bagaimana data tersebar. **Histogram**
+mengelompokkan data ke dalam interval dan menunjukkan bentuknya: simetris,
+miring, atau punya dua puncak. Bedanya dengan diagram batang: pada
+histogram, batangnya menempel satu sama lain karena datanya bersambung
+(angka), sedangkan diagram batang untuk kategori terpisah.
+
+Bentuk distribusi memberi petunjuk: distribusi simetris (seperti tinggi
+badan) cocok diringkas dengan mean; distribusi miring (seperti gaji)
+lebih jujur diringkas dengan median. Inilah alasan kita mempelajari mean,
+median, dan modus terlebih dahulu — statistika memakainya sebagai fondasi.
+
+**Kuartil** membagi data terurut menjadi empat bagian sama besar:
+- **Q1** (kuartil bawah): median dari paruh bawah data.
+- **Q2**: median seluruh data.
+- **Q3** (kuartil atas): median dari paruh atas data.
+- **IQR (jangkauan interkuartil)** = Q3 − Q1: rentang 50% data tengah —
+  ukuran sebaran yang tahan terhadap pencilan.
+
+**Diagram kotak-garis (boxplot)** meringkas lima angka: minimum, Q1,
+median, Q3, maksimum — dalam satu gambar.
+
+**Korelasi** mengukur seberapa kuat dua hal bergerak bersama. Peringatan
+keras statistika: **korelasi bukan sebab-akibat**. Penjualan es krim
+berkorelasi dengan kasus tenggelam — bukan karena es krim berbahaya,
+melainkan keduanya naik saat musim panas (faktor perancu).
+
+## Rumus
+
+**IQR = Q3 − Q1**
+
+Cara membaca: "jangkauan interkuartil sama dengan kuartil atas kurang
+kuartil bawah." Semakin besar IQR, semakin menyebar data tengahnya.
+
+## Contoh Terpandu
+
+**Contoh 1 (kuartil & IQR).** Nilai kuis: 4, 7, 8, 9, 10, 12, 15.
+Langkah 1: data sudah urut (7 data). Q2 = nilai tengah = 9.
+Langkah 2: paruh bawah (di luar median): 4, 7, 8 → Q1 = 7.
+Langkah 3: paruh atas: 10, 12, 15 → Q3 = 12.
+Langkah 4: IQR = 12 − 7 = 5.
+Tafsir: separuh nilai tengah berada dalam rentang 5 poin.
+
+**Contoh 2 (boxplot).** Dari contoh 1, lima angka ringkasan: min 4,
+Q1 7, median 9, Q3 12, maks 15. Kotak digambar dari 7 ke 12 dengan garis
+median di 9; "kumis" memanjang ke 4 dan 15. Sekilas terlihat: data agak
+menjulur ke kanan (15 lebih jauh dari kotak dibanding 4).
+
+**Contoh 3 (korelasi vs sebab-akibat).** Data menunjukkan daerah dengan
+banyak toko sepeda punya angka kecelakaan sepeda lebih tinggi. Kesimpulan
+gegabah: "toko sepeda menyebabkan kecelakaan." Penjelasan yang benar:
+daerah itu memang banyak pesepeda — toko dan kecelakaan sama-sama akibat
+dari banyaknya pesepeda. Selalu cari faktor perancu sebelum menyimpulkan.
+
+**Contoh 4 (membaca histogram).** Histogram tinggi 40 siswa: interval
+150–155 cm ada 4 siswa, 155–160 ada 12, 160–165 ada 16, 165–170 ada 8.
+Langkah 1: batang tertinggi di 160–165 → itulah kelompok terbanyak.
+Langkah 2: bentuknya kira-kira simetris dengan puncak di tengah.
+Tafsir: tinggi siswa mengumpul di sekitar 160–165 cm; mean dan median
+akan berdekatan — ciri distribusi simetris.
+
+## Kesalahpahaman Umum
+
+**"Korelasi berarti sebab-akibat."** Ini kesalahan paling mahal dalam
+statistika. Dua hal bisa bergerak bersama karena faktor ketiga, kebetulan,
+atau bahkan arah sebaliknya. Selalu tanyakan "mungkinkah ada penjelasan
+lain?"
+
+**"Sampel kecil pasti mewakili."** Survei 5 teman tidak bisa mewakili
+500 siswa. Sampel harus acak dan cukup besar; survei jajanan hanya dari
+kelasmu sendiri bias ke selera kelasmu.
+
+**"Rata-rata saja cukup."** Dua kelas bisa punya mean sama 7, tetapi satu
+menyebar (3–10) dan satu mengumpul (6–8). Tanpa ukuran sebaran seperti
+IQR, ceritanya tidak lengkap.
+
+## Di Dunia Nyata
+
+Lembaga survei memprediksi pemilu dari 1.200 responden. Perusahaan obat
+menguji efektivitas lewat uji klinis tersampel. Sekolahmu memakai statistik
+nilai untuk mengevaluasi metode mengajar. Dan setiap kali kamu membaca
+"penelitian menunjukkan...", statistika adalah alat untuk menilai apakah
+klaim itu bisa dipercaya.
+
+## Ringkasan
+
+- Statistika: kumpulkan data, sajikan, simpulkan — dan ukur kepercayaan kesimpulan.
+- Populasi vs sampel: kesimpulan hanya sevalid keterwakilan sampelnya.
+- Kuartil (Q1, Q2, Q3) dan IQR = Q3 − Q1 mengukur sebaran yang tahan pencilan.
+- Boxplot meringkas lima angka dalam satu gambar.
+- Korelasi bukan sebab-akibat — selalu cari faktor perancu.
+- Rata-rata tanpa ukuran sebaran hanya setengah cerita.

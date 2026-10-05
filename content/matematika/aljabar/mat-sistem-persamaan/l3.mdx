@@ -1,0 +1,104 @@
+---
+id: mat-sistem-persamaan
+level: L3
+domain: matematika
+topic: aljabar
+title: Sistem Persamaan Linear
+prerequisites: [mat-persamaan-linear]
+estMinutes: 20
+simulations: [sim-spldv]
+caseStudies: []
+version: 1
+---
+
+## Intuisi
+
+Dua warung bersaing di dekat rumah Dimas. Warung A menjual pulsa dengan
+harga Rp5.000 per GB ditambah biaya admin Rp2.000. Warung B menjual
+Rp4.000 per GB ditambah biaya admin Rp6.000. Beli sedikit, warung A lebih
+murah; beli banyak, warung B lebih murah. Pasti ada satu titik di mana
+harganya **sama persis**. Di titik itulah Dimas tidak peduli beli di mana.
+
+Mencari titik temu dua aturan sekaligus inilah inti **sistem persamaan
+linear dua variabel (SPLDV)**: dua persamaan, dua hal tak diketahui,
+satu jawaban yang memuaskan keduanya.
+
+## Konsep Inti
+
+SPLDV adalah sepasang persamaan linear dengan dua variabel yang sama,
+biasanya x dan y. Penyelesaiannya adalah **pasangan berurutan (x, y)**
+yang membuat kedua persamaan benar sekaligus.
+
+Ada tiga cara menyelesaikannya:
+1. **Substitusi**: nyatakan satu variabel dari satu persamaan, masukkan
+   ke persamaan lain.
+2. **Eliminasi**: samakan koefisien salah satu variabel, lalu jumlahkan
+   atau kurangkan kedua persamaan agar variabel itu hilang.
+3. **Grafik**: gambar kedua garis; titik potongnya adalah jawabannya.
+
+Secara grafik ada tiga kemungkinan: dua garis berpotongan (satu solusi),
+sejajar (tidak ada solusi), atau berimpit (tak hingga solusi).
+
+Sebelum menghitung, ada baiknya menyederhanakan dulu: bagi persamaan
+dengan faktor persekutuan bila ada. Misalnya 2x + 4y = 10 lebih mudah
+dikerjakan sebagai x + 2y = 5. Kebiasaan kecil ini menghemat banyak
+kesalahan hitung.
+
+## Rumus
+
+Bentuk umum:
+
+**a₁x + b₁y = c₁**
+**a₂x + b₂y = c₂**
+
+Eliminasi: kalikan persamaan agar koefisien x (atau y) sama, lalu
+kurangkan — variabel itu lenyap dan tersisa persamaan satu variabel.
+
+## Contoh Terpandu
+
+**Contoh 1 (eliminasi).** Selesaikan x + y = 10 dan x − y = 4.
+Langkah 1: koefisien y sudah sama besar (1 dan −1). Jumlahkan kedua
+persamaan: (x + x) + (y − y) = 10 + 4 → 2x = 14.
+Langkah 2: x = 7. Masukkan ke persamaan pertama: 7 + y = 10 → y = 3.
+Jawaban: (7, 3). Cek: 7 + 3 = 10 (benar) dan 7 − 3 = 4 (benar).
+
+**Contoh 2 (substitusi).** Selesaikan y = 2x dan x + y = 12.
+Langkah 1: y sudah dinyatakan. Ganti y di persamaan kedua: x + 2x = 12.
+Langkah 2: 3x = 12 → x = 4, maka y = 2 × 4 = 8.
+Jawaban: (4, 8). Cek: 4 + 8 = 12 (benar).
+
+**Contoh 3 (kasus khusus).** Selesaikan x + y = 5 dan 2x + 2y = 10.
+Langkah 1: sederhanakan persamaan kedua dengan membagi 2: x + y = 5.
+Langkah 2: kedua persamaan ternyata sama persis — garisnya berimpit.
+Jawaban: tak hingga solusi; setiap pasangan (x, y) dengan x + y = 5
+memenuhi, misalnya (0, 5), (2, 3), atau (5, 0).
+Bandingkan dengan x + y = 5 dan x + y = 7: tidak ada pasangan yang bisa
+memenuhi keduanya sekaligus — sistemnya tidak punya solusi (garis sejajar).
+
+## Kesalahpahaman Umum
+
+**"Jawabannya cuma satu angka."** Bukan — jawabannya pasangan (x, y).
+Menjawab "x = 7" saja belum lengkap; harus (7, 3).
+
+**"Eliminasi bisa langsung dijumlahkan."** Hanya bila koefisien variabel
+yang dihilangkan sudah sama (atau berlawanan). Kalau belum, kalikan dulu
+salah satu atau kedua persamaan.
+
+**"Garis sejajar berarti solusinya banyak."** Kebalik. Garis sejajar tidak
+pernah bertemu → tidak ada solusi. Yang solusinya tak hingga adalah dua
+garis yang berimpit (persis sama).
+
+## Di Dunia Nyata
+
+Perusahaan mencari **titik impas**: kapan pendapatan sama dengan biaya?
+Itu SPLDV. Perencana kota memodelkan dua rute ojek online untuk tahu kapan
+tarifnya sama. Ahli gizi mencampur dua bahan makanan agar protein dan
+harganya pas — dua syarat, dua bahan, satu solusi.
+
+## Ringkasan
+
+- SPLDV: dua persamaan, dua variabel, dicari pasangan (x, y) yang cocok di keduanya.
+- Tiga metode: substitusi, eliminasi, grafik — pilih yang paling mudah untuk soalnya.
+- Eliminasi butuh koefisien sama sebelum dijumlah/dikurang.
+- Tafsir grafik: berpotongan (satu solusi), sejajar (tidak ada), berimpit (tak hingga).
+- Selalu cek pasangan jawaban ke kedua persamaan.

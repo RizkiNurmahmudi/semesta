@@ -1,0 +1,85 @@
+---
+id: mat-pangkat-akar
+level: L3
+domain: matematika
+topic: bilangan
+title: Pangkat & Akar
+prerequisites: [mat-desimal-persen]
+estMinutes: 20
+simulations: [sim-pangkat]
+caseStudies: []
+version: 1
+---
+
+## Intuisi
+
+Dimas meninggalkan semangkuk susu di meja. Satu bakteri membelah menjadi 2,
+lalu 4, lalu 8... setiap jam jumlahnya **berlipat dua**. Setelah 10 jam ada
+2^10 = 1024 bakteri — dari SATU! Inilah kekuatan **pangkat**: perkalian yang
+diulang terhadap bilangan yang sama. Ia tumbuh jauh lebih cepat dari
+penjumlahan biasa. Kebalikannya, **akar**, bertanya: "bilangan apa yang
+dipangkatkan menghasilkan ini?" — seperti melacak kembali jejak lipatan.
+
+## Konsep Inti
+
+- **Pangkat a^n**: a dikalikan dengan dirinya sendiri sebanyak n kali.
+  2^5 = 2 × 2 × 2 × 2 × 2 = 32. a disebut basis, n disebut eksponen.
+- **Aturan pangkat**:
+  - a^m × a^n = a^(m+n) — basis sama, pangkat dijumlah.
+  - (a^m)^n = a^(m×n) — pangkat dipangkatkan, pangkat dikali.
+  - a^0 = 1 (untuk a ≠ 0).
+- **Akar kuadrat √a**: bilangan yang jika dikuadratkan menghasilkan a.
+  √144 = 12 karena 12² = 144. Akar adalah kebalikan pangkat dua.
+- **Notasi ilmiah**: menulis bilangan sangat besar/kecil sebagai p × 10^n
+  dengan 1 ≤ p < 10. Kecepatan cahaya 300.000.000 m/s = 3 × 10^8 m/s.
+
+## Rumus
+
+- a^n = a × a × ... × a (sebanyak n faktor).
+  Cara membaca: "a pangkat n".
+- a^m × a^n = a^(m+n); a^m ÷ a^n = a^(m−n); (a^m)^n = a^(mn).
+- √a = a^(1/2); √(a×b) = √a × √b.
+- Pertumbuhan berlipat: setelah t periode dengan rasio r, jumlah = awal × r^t.
+
+## Contoh Terpandu
+
+**Contoh 1: Bakteri berlipat dua tiap jam, mulai dari 1. Berapa setelah 10 jam?**
+Jumlah = 1 × 2^10. Hitung: 2^5 = 32, 2^10 = 32 × 32 = **1024** bakteri.
+Bandingkan dengan penjumlahan: 1 + 2×10 = 21. Pangkat jauh lebih dahsyat!
+
+**Contoh 2: Kertas 0,1 mm dilipat 10 kali. Setebal apa?**
+Tebal = 0,1 × 2^10 mm = 0,1 × 1024 = **102,4 mm ≈ 10,2 cm**.
+Hanya 10 lipatan mengubah selembar kertas setipis 10 cm! Untuk mencapai
+1 cm (10 mm) cukup 7 lipatan: 0,1 × 128 = 12,8 mm.
+
+**Contoh 3: Sederhanakan √144 + 3^2.**
+√144 = 12 dan 3^2 = 9, jadi 12 + 9 = **21**.
+
+## Kesalahpahaman Umum
+
+1. **Mengira 2^3 = 2 × 3 = 6.**
+   Pelurusannya: 2^3 = 2 × 2 × 2 = 8. Pangkat = perkalian berulang,
+   bukan perkalian dengan eksponennya.
+2. **Mengira (a + b)² = a² + b².**
+   Pelurusannya: (3 + 4)² = 7² = 49, sedangkan 3² + 4² = 25. Beda!
+   Yang benar: (a + b)² = a² + 2ab + b².
+3. **Bingung dengan akar negatif**: mengira √9 = ±3.
+   Pelurusannya: simbol √ berarti akar **utama** (positif), jadi √9 = 3.
+   Persamaan x² = 9 memang punya dua solusi (±3), tetapi nilai √9 tetap 3.
+
+## Di Dunia Nyata
+
+Bakteri, virus, dan bunga bank memakai pertumbuhan berpangkat — itulah
+sebabnya wabah dan utang berbunga bisa meledak. Kapasitas HP: 1 GB =
+2^30 byte ≈ 1 miliar byte. Skala Richter gempa bersifat logaritmik
+(kebalikan pangkat): gempa magnitudo 6 sepuluh kali lebih kuat dari
+magnitudo 5.
+
+## Ringkasan
+
+- a^n = perkalian a sebanyak n kali; tumbuh jauh lebih cepat dari penjumlahan.
+- Aturan: jumlahkan pangkat saat mengalikan basis sama; kalikan pangkat saat
+  memangkatkan pangkat; a^0 = 1.
+- √a adalah kebalikan dari kuadrat; √9 = 3 (akar utama selalu positif).
+- Notasi ilmiah p × 10^n untuk bilangan raksasa atau mungil.
+- Waspadai jebakan: 2^3 ≠ 6 dan (a + b)² ≠ a² + b².

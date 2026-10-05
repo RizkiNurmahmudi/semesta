@@ -1,0 +1,91 @@
+---
+id: mat-barisan-deret
+level: L4
+domain: matematika
+topic: bilangan
+title: Barisan & Deret
+prerequisites: [mat-pangkat-akar]
+estMinutes: 25
+simulations: [sim-deret]
+caseStudies: []
+version: 1
+---
+
+## Intuisi
+
+Kakek mengajak Dimas ke candi. "Hitung anak tangganya," kata Kakek, "lalu
+tebak: kalau polanya berlanjut, berapa tinggi tangga ke-20?" Anak tangga
+itu tersusun berpola: 3, 7, 11, 15, ... — tiap naik selalu **bertambah 4**.
+Pola bilangan yang berurutan seperti ini disebut **barisan**. Dan jika semua
+sukunya dijumlahkan, hasilnya disebut **deret**. Sekali kita menemukan
+aturannya, kita bisa melompat ke suku ke-100 tanpa menghitung satu per satu.
+
+## Konsep Inti
+
+- **Barisan**: daftar bilangan berurutan U_1, U_2, U_3, ... dengan aturan tertentu.
+- **Barisan aritmetika**: selisih antar suku tetap, disebut beda (b).
+  Contoh: 3, 7, 11, 15, ... dengan b = 4.
+- **Barisan geometri**: rasio antar suku tetap, disebut rasio (r).
+  Contoh: 2, 6, 18, 54, ... dengan r = 3.
+- **Deret**: jumlah suku-suku barisan: S_n = U_1 + U_2 + ... + U_n.
+- **Deret tak hingga**: penjumlahan yang diteruskan tanpa henti. Ajaibnya,
+  kadang hasilnya **berhingga**: 1 + 1/2 + 1/4 + 1/8 + ... = 2.
+
+## Rumus
+
+- Suku ke-n aritmetika: U_n = a + (n − 1)b, dengan a = suku pertama.
+  Cara membaca: "suku ke-n sama dengan a tambah n kurang satu kali b".
+- Jumlah n suku aritmetika: S_n = n/2 × (2a + (n − 1)b) = n/2 × (a + U_n).
+- Suku ke-n geometri: U_n = a × r^(n − 1).
+- Jumlah n suku geometri (r ≠ 1): S_n = a × (r^n − 1)/(r − 1).
+- Deret geometri tak hingga (|r| < 1): S = a/(1 − r).
+
+## Contoh Terpandu
+
+**Contoh 1: Tangga candi 3, 7, 11, 15, ... Berapa tinggi tangga ke-20 dan
+total tinggi 20 tangga pertama?**
+Ini aritmetika: a = 3, b = 4.
+U_20 = 3 + (20 − 1) × 4 = 3 + 76 = **79**.
+S_20 = 20/2 × (3 + 79) = 10 × 82 = **820**.
+Cek nalar: rata-rata suku pertama dan terakhir = (3 + 79)/2 = 41;
+20 × 41 = 820. Cocok!
+
+**Contoh 2: Barisan 2, 6, 18, ... Suku ke-6?**
+Ini geometri: a = 2, r = 3.
+U_6 = 2 × 3^(6−1) = 2 × 3^5 = 2 × 243 = **486**.
+
+**Contoh 3: 1 + 1/2 + 1/4 + 1/8 + ...**
+Geometri tak hingga dengan a = 1, r = 1/2 (|r| < 1, jadi konvergen).
+S = 1/(1 − 1/2) = 1/(1/2) = **2**.
+Masuk akal: potongan kuenya makin kecil, totalnya tak pernah melewati 2.
+
+## Kesalahpahaman Umum
+
+1. **Tertukar beda (b) dengan rasio (r)**: barisan 2, 6, 18 dianggap
+   aritmetika dengan b = 4.
+   Pelurusannya: cek dulu — selisihnya 4 lalu 12 (tidak tetap), sedangkan
+   rasionya selalu 3. Ini geometri.
+2. **Salah indeks (off-by-one)**: U_n = a + n×b untuk contoh 1 menghasilkan
+   U_1 = 7, padahal U_1 = 3.
+   Pelurusannya: suku pertama tidak "melompat", jadi kalikan b dengan
+   (n − 1), bukan n.
+3. **Mengira semua deret tak hingga hasilnya tak hingga.**
+   Pelurusannya: hanya jika |r| ≥ 1. Jika |r| < 1, suku-sukunya menyusut
+   cukup cepat sehingga jumlahnya menuju nilai berhingga.
+
+## Di Dunia Nyata
+
+Tabungan Rp100.000 dengan bunga 10% per tahun membentuk barisan geometri:
+setelah 5 tahun menjadi 100.000 × 1,1^5 ≈ **Rp161.051** — bunga berbunga!
+Tumpukan kursi yang saling menumpuk bertambah secara aritmetika. Paradoks
+Zeno ("untuk sampai tujuan harus menempuh setengah sisa jarak dulu,
+selamanya") terpecahkan oleh deret tak hingga: 1/2 + 1/4 + 1/8 + ... = 1,
+jadi kita benar-benar sampai.
+
+## Ringkasan
+
+- Aritmetika: beda tetap → U_n = a + (n−1)b; S_n = n/2 × (a + U_n).
+- Geometri: rasio tetap → U_n = a × r^(n−1); S_n = a(r^n − 1)/(r − 1).
+- Deret geometri tak hingga konvergen hanya jika |r| < 1, menuju a/(1 − r).
+- Waspadai off-by-one: suku pertama memakai (n − 1), bukan n.
+- Identifikasi dulu jenis barisannya (cek selisih vs rasio) sebelum memakai rumus.

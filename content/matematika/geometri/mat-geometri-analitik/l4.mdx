@@ -1,0 +1,87 @@
+---
+id: mat-geometri-analitik
+level: L4
+domain: matematika
+topic: geometri
+title: Geometri Analitik
+prerequisites: [mat-fungsi-grafik, mat-trigonometri-dasar]
+estMinutes: 25
+simulations: [sim-koordinat]
+caseStudies: []
+version: 1
+---
+
+## Intuisi
+
+Dalam cerita "Peta Harta Karun", Dimas menemukan peta lama: "Dari pohon beringin berjalan 3 langkah ke timur, 4 langkah ke utara — di situlah harta terpendam." Tanpa sadar, Dimas memakai **koordinat**! Geometri analitik adalah jembatan antara gambar dan angka: setiap titik punya "alamat" berupa pasangan bilangan (x, y), dan setiap bangun bisa ditulis sebagai persamaan. Ide ini ditemukan oleh René Descartes pada tahun 1637 dan mengubah matematika selamanya.
+
+## Konsep Inti
+
+**Sistem koordinat Kartesius**: dua garis bilangan tegak lurus — sumbu-x (mendatar) dan sumbu-y (tegak) — berpotongan di titik asal O(0, 0). Setiap titik P ditulis P(x, y): x = absis (langkah ke kanan/kiri), y = ordinat (langkah ke atas/bawah).
+
+Empat alat utama:
+
+1. **Jarak dua titik** — sebenarnya Pythagoras yang menyamar! Jarak P(x₁, y₁) ke Q(x₂, y₂):
+   d = √((x₂ − x₁)² + (y₂ − y₁)²)
+2. **Titik tengah**: M = ((x₁ + x₂)/2, (y₁ + y₂)/2) — cukup rata-ratakan koordinatnya.
+3. **Gradien garis** (kemiringan): m = (y₂ − y₁)/(x₂ − x₁) = naik / datar.
+4. **Persamaan garis**: y = mx + c, dengan c = titik potong garis dengan sumbu-y.
+
+**Persamaan lingkaran** berpusat (a, b) berjari-jari r:
+
+(x − a)² + (y − b)² = r²
+
+Mengapa? Setiap titik (x, y) di lingkaran berjarak r dari pusat (a, b) — terapkan rumus jarak, kuadratkan kedua sisi, selesai!
+
+Hubungan dua garis: **sejajar** jika gradiennya sama (m₁ = m₂); **tegak lurus** jika m₁ × m₂ = −1.
+
+## Rumus
+
+- Jarak: d = √((x₂ − x₁)² + (y₂ − y₁)²)
+- Titik tengah: ((x₁ + x₂)/2, (y₁ + y₂)/2)
+- Gradien: m = Δy / Δx
+- Persamaan garis: y = mx + c, atau y − y₁ = m(x − x₁)
+- Persamaan lingkaran: (x − a)² + (y − b)² = r²
+- Syarat dua garis tegak lurus: m₁ × m₂ = −1
+
+## Contoh Terpandu
+
+**Contoh 1 — Harta karun.** Pohon di (1, 2), harta 3 langkah ke timur dan 4 ke utara → titik (4, 6). Berapa jarak lurusnya?
+
+d = √((4 − 1)² + (6 − 2)²) = √(9 + 16) = √25 = 5 langkah.
+
+**Contoh 2 — Persamaan garis.** Tentukan persamaan garis melalui (1, 2) dan (3, 8)!
+
+m = (8 − 2)/(3 − 1) = 6/2 = 3. Pakai titik (1, 2): y − 2 = 3(x − 1) → y = 3x − 1. Cek: x = 3 → y = 8 (benar).
+
+**Contoh 3 — Titik pada lingkaran.** Lingkaran berpusat (2, −1) berjari-jari 5. Apakah titik (5, 3) ada di lingkaran?
+
+(5 − 2)² + (3 + 1)² = 9 + 16 = 25 = 5² (benar). Ya, titik itu tepat di lingkaran!
+
+**Contoh 4 — Garis tegak lurus.** Garis g: y = 2x + 1. Tentukan garis h yang tegak lurus g dan melalui (0, 0)!
+
+Gradien h = −1/2 (karena 2 × (−1/2) = −1), jadi h: y = −½x.
+
+**Contoh 5 — Melengkapkan kuadrat.** Tentukan pusat dan jari-jari lingkaran x² + y² − 4x + 6y − 12 = 0!
+
+Kelompokkan: (x² − 4x) + (y² + 6y) = 12. Lengkapkan kuadrat: (x² − 4x + 4) + (y² + 6y + 9) = 12 + 4 + 9 → (x − 2)² + (y + 3)² = 25. Jadi pusat (2, −3), jari-jari 5. Teknik "melengkapkan kuadrat" ini mengubah persamaan umum menjadi bentuk baku lingkaran.
+
+## Kesalahpahaman Umum
+
+- **"Urutan (x, y) boleh dibalik."** Tidak! (3, 4) dan (4, 3) adalah titik berbeda. Selalu x dulu, baru y.
+- **"Gradien negatif berarti garisnya salah."** Tidak — gradien negatif artinya garis turun ke kanan, sama validnya dengan gradien positif.
+- **"Persamaan lingkaran harus selalu x² + y² = r²."** Itu hanya jika pusatnya di (0, 0). Bentuk umumnya (x − a)² + (y − b)² = r².
+- **"Jarak selalu dihitung dengan rumus hafalan."** Rumus jarak **adalah** Pythagoras: Δx dan Δy adalah sisi siku-siku, d adalah hipotenusa. Pahami, jangan hanya hafal.
+
+## Di Dunia Nyata
+
+GPS di HP-mu adalah geometri analitik raksasa: satelit menghitung jarak ke tiga titik untuk menentukan posisimu (disebut trilaterasi — Pythagoras versi tiga dimensi!). Arsitek menggambar denah dengan koordinat. Gim seperti Minecraft menyimpan setiap blok sebagai koordinat (x, y, z). Ojek online menghitung jarak rute dari koordinat peta.
+
+## Ringkasan
+
+- Titik = alamat (x, y); x mendatar, y tegak.
+- Jarak dua titik = Pythagoras: d = √((Δx)² + (Δy)²).
+- Gradien m = Δy/Δx; persamaan garis: y = mx + c.
+- Persamaan lingkaran: (x − a)² + (y − b)² = r².
+- Sejajar: gradien sama; tegak lurus: m₁ × m₂ = −1.
+- Fondasi untuk kalkulus, fisika, dan pemrograman grafis.
