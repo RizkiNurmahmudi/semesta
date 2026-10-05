@@ -199,9 +199,27 @@ importers:
 
   apps/web:
     dependencies:
+      '@semesta/content-schema':
+        specifier: workspace:*
+        version: link:../../packages/content-schema
+      '@semesta/progress-core':
+        specifier: workspace:*
+        version: link:../../packages/progress-core
+      '@semesta/sim-engine':
+        specifier: workspace:*
+        version: link:../../packages/sim-engine
+      '@semesta/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       '@tailwindcss/vite':
         specifier: ^4.1.0
         version: 4.3.3(vite@7.3.6(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.51.2)(tsx@4.23.15)(yaml@2.9.1))
+      dexie:
+        specifier: ^4.4.6
+        version: 4.4.6
+      lucide-react:
+        specifier: ^1.51.0
+        version: 1.51.0(@types/react@19.3.0)(react@19.3.0)
       react:
         specifier: ^19.1.1
         version: 19.3.0
@@ -211,6 +229,9 @@ importers:
       tailwindcss:
         specifier: ^4.1.0
         version: 4.3.3
+      yaml:
+        specifier: ^2.9.1
+        version: 2.9.1
     devDependencies:
       '@types/react':
         specifier: ^19.1.1
@@ -263,6 +284,10 @@ importers:
         version: 3.2.7(jiti@2.7.0)(jsdom@26.1.0(supports-color@7.2.0))(lightningcss@1.32.0)(supports-color@7.2.0)(terser@5.51.2)(tsx@4.23.15)(yaml@2.9.1)
 
   packages/ui:
+    dependencies:
+      lucide-react:
+        specifier: ^1.51.0
+        version: 1.51.0(@types/react@19.3.0)(react@19.3.0)
     devDependencies:
       '@testing-library/react':
         specifier: ^16.3.0
@@ -1778,6 +1803,9 @@ packages:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
+  dexie@4.4.6:
+    resolution: {integrity: sha512-hJP/BO6mjB+tX6hToIO1kmxYLNmun90wYbfcoAoLpKEyDYal/k33dg0TAfoUe2TDsbbLoVIzljJ3BN2UbR5EOg==}
+
   dom-accessibility-api@0.5.16:
     resolution: {integrity: sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg==}
 
@@ -2378,6 +2406,15 @@ packages:
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
+
+  lucide-react@1.51.0:
+    resolution: {integrity: sha512-9929jimol5y7VbXUlVKcgURMSeIxFJB7dtWCkRAaNnF7KiCRkSkhmqWPUmAmUFYPezNawFk6qvz3Mu0gEnfI4g==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
 
   lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
@@ -4625,6 +4662,8 @@ snapshots:
 
   detect-libc@2.1.2: {}
 
+  dexie@4.4.6: {}
+
   dom-accessibility-api@0.5.16: {}
 
   dunder-proto@1.0.1:
@@ -5301,6 +5340,12 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  lucide-react@1.51.0(@types/react@19.3.0)(react@19.3.0):
+    dependencies:
+      react: 19.3.0
+    optionalDependencies:
+      '@types/react': 19.3.0
 
   lz-string@1.5.0: {}
 

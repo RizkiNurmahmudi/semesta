@@ -51,7 +51,8 @@ export function rk4Step<S extends Record<string, number>>(
   const keys = Object.keys(s) as (keyof S)[]
   const add = (a: S, b: S, k: number): S => {
     const out = {} as S
-    for (const key of keys) out[key] = (a[key] as number) + k * (b[key] as number)
+    for (const key of keys)
+      out[key] = ((a[key] as number) + k * (b[key] as number)) as S[keyof S]
     return out
   }
   const k1 = deriv(s)
@@ -60,10 +61,11 @@ export function rk4Step<S extends Record<string, number>>(
   const k4 = deriv(add(s, k3, dt))
   const out = {} as S
   for (const key of keys) {
-    out[key] =
+    out[key] = (
       (s[key] as number) +
       (dt / 6) *
         ((k1[key] as number) + 2 * (k2[key] as number) + 2 * (k3[key] as number) + (k4[key] as number))
+    ) as S[keyof S]
   }
   return out
 }
@@ -87,3 +89,15 @@ export function createStepper(dt: number) {
     },
   }
 }
+
+// Simulasi Gerak Parabola (M1) — didefinisikan di projectile.ts.
+export {
+  GRAVITY,
+  TARGET_DISTANCE,
+  analyticRange,
+  analyticMaxHeight,
+  analyticFlightTime,
+  projectileSim,
+  simulateFlight,
+} from './projectile'
+export type { ProjectileParams, ProjectileState } from './projectile'

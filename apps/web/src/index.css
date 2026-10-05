@@ -1,1 +1,84 @@
 @import "tailwindcss";
+
+/* Daftarkan sumber kelas dari paket UI bersama (disymlink via workspace). */
+@source "../../../packages/ui/src";
+
+/* Token desain Semesta — terkunci 2026-10-05 (lihat docs/PRD.md).
+   Palet: Baby Blue #89CFF0, Deep Blue #1E6FB8, Warm Amber #FFC53D,
+   Background #F4FAFE, Teks #1E293B. Font: Plus Jakarta Sans. */
+@theme {
+  --color-semesta-baby: #89cff0;
+  --color-semesta-deep: #1e6fb8;
+  --color-semesta-deep-dark: #185a96;
+  --color-semesta-amber: #ffc53d;
+  --color-semesta-bg: #f4fafe;
+  --color-semesta-ink: #1e293b;
+  --color-semesta-panel: #e1f4fd;
+
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-semesta-bg);
+    color: var(--color-semesta-ink);
+    overflow-x: hidden;
+  }
+}
+
+/* Angka tabular untuk HUD & skor */
+.font-mono-num,
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+.font-mono-num {
+  font-family: var(--font-mono);
+}
+
+/* Sembunyikan scrollbar pada strip chip horizontal */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Slider kustom layar simulasi */
+input[type="range"].semesta-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 999px;
+  outline: none;
+}
+input[type="range"].semesta-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #1e6fb8;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(30, 111, 184, 0.35);
+  cursor: pointer;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+input[type="range"].semesta-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+input[type="range"].semesta-slider::-webkit-slider-thumb:active {
+  transform: scale(0.95);
+}
+input[type="range"].semesta-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #1e6fb8;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(30, 111, 184, 0.35);
+  cursor: pointer;
+}

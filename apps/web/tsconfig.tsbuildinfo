@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/AnimatedSplashBackground.tsx","./src/features/lesson/Quiz.tsx","./src/features/lesson/QuizResult.tsx","./src/features/lesson/SimHost.tsx","./src/features/lesson/StoryViewer.tsx","./src/features/lesson/Trophy.tsx","./src/lib/content.ts","./src/lib/db.ts","./vite.config.ts"],"version":"5.9.3"}
