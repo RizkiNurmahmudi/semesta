@@ -7,11 +7,13 @@
 > - Kurikulum dirancang sendiri (jalur L0–L5), bukan mengikuti kurikulum
 >   sekolah secara ketat — tetapi dapat dipetakan bila perlu (PRD §6).
 > - Setiap konsep pada akhirnya menjadi satu **lesson** lengkap
->   (anatomi di §3) dan satu node di `content/skill-graph.yaml`
->   (saat ini baru 4 konsep terdaftar — sisanya ditambahkan bertahap).
+>   (anatomi di §3) dan satu node di `content/skill-graph.yaml`.
 > - **L4–L5 adalah tahap lanjut** (ditunda hingga M2+ stabil, sesuai
 >   risiko R1 di PRD) — tercantum di sini agar peta lengkap, bukan
 >   untuk diproduksi sekarang.
+> - **§9** memuat roadmap referensi lengkap dari pengguna (SD sampai
+>   pascasarjana) sebagai arah jangka panjang — di luar cakupan produksi
+>   aplikasi.
 
 ## 1. Cara membaca dokumen
 
@@ -449,3 +451,222 @@ fis-listrik-statis (L2) → fis-rangkaian → fis-magnet [L4]
 ```
 
 > Legenda: ✅ = lesson lengkap · 🔜 = tahap lanjut (L4–L5) · tanpa tanda = antrean produksi M2+.
+
+## 9. Roadmap referensi lengkap — SD sampai pascasarjana
+
+> Bagian ini memuat roadmap materi dari pengguna (2026-10-05) **apa adanya**,
+> sebagai referensi arah jangka panjang. Cakupan produksi aplikasi tetap
+> L0–L5 (§4–§5). Semua materi yang melampaui L5 adalah referensi kurikulum,
+> **bukan** target produksi.
+
+### 9.1 Pemetaan level roadmap → level Semesta
+
+| Roadmap | Jenjang | Setara Semesta | Status di dokumen ini |
+|---|---|---|---|
+| Matematika Level 1 | SD | L0–L1 | Rinci di §4.1, §4.3, §4.4 |
+| Matematika Level 2 | SMP | L2 | Rinci di §4.1–§4.4 |
+| Matematika Level 3 | SMA | L3 | Rinci di §4.1–§4.4 |
+| Matematika Level 4 | Awal kuliah | L4–L5 | Rinci di §4.5 |
+| Matematika Level 5–8 | Sarjana–mahir | Di luar L5 | Referensi (§9.2) |
+| Fisika Level 1 | SD–SMP awal | L0–L1 | Rinci di §5 |
+| Fisika Level 2 | SMP | L2 | Rinci di §5 |
+| Fisika Level 3 | SMA | L3 | Rinci di §5 |
+| Fisika Level 4 | PT dasar | L4–L5 | Sebagian (§5.1, §5.4) |
+| Fisika Level 5–7 | Sarjana–mahir | Di luar L5 | Referensi (§9.3) |
+
+### 9.2 Roadmap Materi Matematika: Dari Nol sampai Mahir
+
+#### Level 1: Dasar (SD)
+
+- Bilangan cacah, bilangan bulat, dan operasi hitung (+, −, ×, ÷)
+- Faktor, kelipatan, FPB, KPK
+- Pecahan, desimal, persen
+- Perbandingan dan skala
+- Satuan ukuran (panjang, berat, waktu, volume)
+- Bangun datar dan bangun ruang sederhana (keliling, luas, volume)
+- Statistika dasar (tabel, diagram, rata-rata)
+
+#### Level 2: Pra-Aljabar (SMP)
+
+- Bilangan negatif, pangkat, akar
+- Aljabar dasar: variabel, ekspresi, persamaan linear
+- Pertidaksamaan linear
+- Sistem persamaan linear dua variabel
+- Fungsi dan grafik dasar, koordinat Kartesius
+- Teorema Pythagoras
+- Kesebangunan dan kongruensi
+- Transformasi geometri (translasi, refleksi, rotasi, dilatasi)
+- Peluang dasar
+
+#### Level 3: Matematika Menengah (SMA)
+
+- Persamaan dan fungsi kuadrat
+- Eksponen dan logaritma
+- Barisan dan deret (aritmetika, geometri)
+- Trigonometri (sin, cos, tan, identitas, persamaan)
+- Polinomial dan teorema sisa
+- Matriks dan determinan
+- Vektor
+- Geometri analitik (garis, lingkaran, elips, parabola, hiperbola)
+- Fungsi komposisi dan invers
+- Limit fungsi
+- Turunan dan integral dasar
+- Statistika dan peluang (permutasi, kombinasi, distribusi)
+
+#### Level 4: Kalkulus (Awal Kuliah)
+
+- Limit dan kekontinuan
+- Turunan: aturan rantai, turunan implisit, aplikasi (maks/min, laju perubahan)
+- Integral: tak tentu, tentu, teknik integrasi, aplikasi (luas, volume)
+- Barisan dan deret tak hingga, deret Taylor dan Maclaurin
+- Kalkulus multivariabel: turunan parsial, gradien, integral lipat dua dan tiga
+- Kalkulus vektor: integral garis, teorema Green, Stokes, Gauss
+
+#### Level 5: Aljabar Linear dan Matematika Diskrit
+
+- Sistem persamaan linear, eliminasi Gauss
+- Ruang vektor, basis, dimensi
+- Transformasi linear
+- Nilai eigen dan vektor eigen
+- Diagonalisasi, dekomposisi (LU, QR, SVD)
+- Logika proposisi dan predikat
+- Himpunan, relasi, fungsi
+- Induksi matematika
+- Kombinatorika
+- Teori graf
+- Teori bilangan dasar
+
+#### Level 6: Matematika Terapan
+
+- Persamaan diferensial biasa (ODE) orde 1 dan 2
+- Transformasi Laplace
+- Deret dan transformasi Fourier
+- Persamaan diferensial parsial (PDE)
+- Probabilitas dan statistika lanjut (distribusi, inferensi, regresi, uji hipotesis)
+- Komputasi/metode numerik (akar persamaan, interpolasi, integrasi numerik, solusi ODE numerik)
+- Optimasi dan pemrograman linear
+
+#### Level 7: Matematika Lanjut (Tingkat Sarjana Matematika)
+
+- Analisis real: kelengkapan bilangan real, konvergensi, kekontinuan seragam, integral Riemann
+- Aljabar abstrak: grup, ring, field
+- Topologi dasar
+- Analisis kompleks: fungsi analitik, integral kontur, residu
+- Teori peluang berbasis ukuran (measure theory)
+- Geometri diferensial dasar
+
+#### Level 8: Spesialisasi (Mahir)
+
+- Analisis fungsional
+- Teori Galois
+- Topologi aljabar
+- Persamaan diferensial lanjut
+- Teori kontrol dan sistem dinamik
+- Proses stokastik
+- Matematika untuk AI/ML (optimasi konveks, teori informasi, statistika Bayesian)
+- Kriptografi dan teori bilangan lanjut
+
+### 9.3 Roadmap Materi Fisika: Dari Nol sampai Mahir
+
+#### Level 1: Pengenalan Sains dan Fisika Dasar (SD–SMP Awal)
+
+- Besaran dan satuan (SI), pengukuran, angka penting
+- Sifat dan wujud zat
+- Suhu dan kalor dasar
+- Gaya, gerak sederhana, dan energi dalam kehidupan sehari-hari
+- Cahaya dan bunyi (pengenalan)
+- Listrik dan magnet sederhana
+
+#### Level 2: Fisika SMP
+
+- Gerak lurus (GLB, GLBB)
+- Hukum Newton dan jenis-jenis gaya
+- Usaha, energi, dan daya
+- Pesawat sederhana
+- Tekanan (zat padat, cair, gas), hukum Pascal, Archimedes
+- Getaran, gelombang, dan bunyi
+- Cahaya, pemantulan, pembiasan, lensa, dan cermin
+- Listrik statis dan dinamis, rangkaian sederhana, hukum Ohm
+- Kemagnetan dan induksi elektromagnetik dasar
+- Tata surya dan bumi
+
+#### Level 3: Fisika SMA
+
+- Besaran vektor dan analisis dimensi
+- Kinematika: gerak parabola, gerak melingkar
+- Dinamika: hukum Newton lanjut, gesekan, gaya sentripetal
+- Usaha, energi, momentum, impuls, dan tumbukan
+- Gravitasi Newton dan hukum Kepler
+- Elastisitas dan hukum Hooke
+- Dinamika rotasi: momen gaya, momen inersia, kesetimbangan benda tegar
+- Fluida statis dan dinamis (Bernoulli)
+- Suhu, kalor, teori kinetik gas, termodinamika
+- Gelombang mekanik, bunyi (efek Doppler), gelombang cahaya (interferensi, difraksi)
+- Listrik statis (hukum Coulomb, medan, potensial, kapasitor)
+- Listrik dinamis, hukum Kirchhoff, rangkaian arus searah
+- Medan magnet, gaya Lorentz, induksi elektromagnetik, arus bolak-balik
+- Fisika modern: relativitas khusus, efek fotoelektrik, model atom, radioaktivitas
+
+#### Level 4: Fisika Dasar Perguruan Tinggi (prasyarat: kalkulus)
+
+- Mekanika klasik dengan kalkulus: kinematika dan dinamika vektor
+- Kerja, energi, dan kekekalan energi
+- Sistem partikel, pusat massa, momentum sudut
+- Osilasi harmonik sederhana, teredam, dan paksa
+- Gelombang: persamaan gelombang, superposisi, gelombang berdiri
+- Termodinamika: hukum I–III, entropi, mesin kalor
+- Listrik dan magnet: hukum Gauss, hukum Ampere, hukum Faraday
+- Persamaan Maxwell (pengenalan)
+- Optik geometri dan optik fisis
+- Pengantar fisika modern
+
+#### Level 5: Fisika Menengah — Tingkat Sarjana (prasyarat: ODE, aljabar linear, kalkulus vektor)
+
+- Mekanika klasik: formulasi Lagrange dan Hamilton, gaya sentral, kerangka non-inersia
+- Elektrodinamika: persamaan Maxwell lengkap, gelombang elektromagnetik, radiasi
+- Mekanika kuantum: persamaan Schrödinger, sumur potensial, osilator harmonik, atom hidrogen, spin
+- Fisika statistik dan termodinamika: ensemble, distribusi Boltzmann, Fermi-Dirac, Bose-Einstein
+- Metode matematika fisika: deret Fourier, fungsi khusus, PDE, fungsi kompleks
+- Fisika komputasi dan simulasi numerik
+- Optik lanjut dan fisika gelombang
+
+#### Level 6: Fisika Lanjut (Akhir Sarjana ke Pascasarjana)
+
+- Mekanika kuantum lanjut: teori perturbasi, hamburan, simetri, momentum sudut
+- Relativitas khusus dalam formulasi tensor, pengantar relativitas umum
+- Fisika zat padat: struktur kristal, pita energi, semikonduktor, superkonduktivitas
+- Fisika atom dan molekul
+- Fisika inti dan partikel: model standar, interaksi fundamental
+- Astrofisika dan kosmologi
+- Fisika plasma
+
+#### Level 7: Spesialisasi (Mahir)
+
+- Teori medan kuantum (QFT)
+- Relativitas umum dan kosmologi lanjut
+- Fisika materi terkondensasi lanjut
+- Teori string dan gravitasi kuantum
+- Informasi kuantum dan komputasi kuantum
+- Fisika partikel energi tinggi
+- Fisika statistik non-ekuilibrium dan sistem kompleks
+- Fisika biologi dan biofisika
+- Fisika eksperimental: instrumentasi, analisis data, dan fisika detektor
+
+### 9.4 Kandidat penambahan (dari roadmap, dalam cakupan L0–L3, belum rinci di §4–§5)
+
+Topik-topik berikut muncul di roadmap §9.2–§9.3 pada jenjang SD–SMA tetapi
+belum dijabarkan sebagai konsep di §4–§5. Kandidat untuk ditambahkan
+bertahap (keputusan produksi terpisah — belum masuk skill-graph maupun
+materi):
+
+**Matematika** — FPB & KPK; skala; satuan ukuran; pertidaksamaan linear;
+kesebangunan & kongruensi; transformasi geometri; logaritma; polinomial &
+teorema sisa; matriks & determinan; vektor; fungsi invers; permutasi &
+kombinasi.
+
+**Fisika** — besaran & satuan SI + angka penting; pesawat sederhana; tekanan
+(zat padat/cair/gas), hukum Pascal & Archimedes; tata surya & bumi;
+elastisitas & hukum Hooke; dinamika rotasi; fluida dinamis (Bernoulli); teori
+kinetik gas & termodinamika; efek Doppler; interferensi & difraksi; hukum
+Coulomb & kapasitor; hukum Kirchhoff; gaya Lorentz & arus bolak-balik; fisika
+modern (relativitas khusus, efek fotoelektrik, model atom, radioaktivitas).
