@@ -1,0 +1,29 @@
+<svg width="512" height="512" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Atom Semesta">
+  <!-- Deep Blue rounded emblem base -->
+  <rect x="6" y="6" width="108" height="108" rx="32" fill="#1E6FB8"/>
+  <rect x="10" y="10" width="100" height="100" rx="28" stroke="#89CFF0" stroke-opacity="0.35" stroke-width="2"/>
+
+  <!-- Soft decorative glow -->
+  <circle cx="60" cy="60" r="36" fill="#89CFF0" fill-opacity="0.12"/>
+
+  <!-- Orbit 1 (tilted) -->
+  <g transform="rotate(-32 60 60)">
+    <ellipse cx="60" cy="60" rx="42" ry="17" stroke="#89CFF0" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="102" cy="60" r="6.5" fill="#FFC53D" stroke="#1E6FB8" stroke-width="2"/>
+  </g>
+
+  <!-- Orbit 2 (tilted) -->
+  <g transform="rotate(32 60 60)">
+    <ellipse cx="60" cy="60" rx="42" ry="17" stroke="#89CFF0" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="18" cy="60" r="6" fill="#FFFFFF" stroke="#89CFF0" stroke-width="2.5"/>
+  </g>
+
+  <!-- Central nucleus -->
+  <circle cx="60" cy="60" r="12" fill="#FFC53D"/>
+  <circle cx="56" cy="56" r="4" fill="#FFFBEB" fill-opacity="0.8"/>
+
+  <!-- Sparkle accents -->
+  <circle cx="28" cy="28" r="3" fill="#FFC53D"/>
+  <circle cx="92" cy="30" r="2.5" fill="#89CFF0"/>
+  <circle cx="88" cy="92" r="3" fill="#FFC53D"/>
+</svg>
