@@ -1,0 +1,1 @@
+{"dependencies":{"@semesta/content-schema":"workspace:*","tsx":"^4.19.0","yaml":"^2.6.0"},"name":"@semesta/build-content","private":true,"scripts":{"validate":"tsx src/validate.ts"},"type":"module","version":"0.1.0"}

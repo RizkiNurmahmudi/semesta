@@ -1,0 +1,40 @@
+# Bank soal Gerak Parabola L2 — contoh awal (M1/M2: ≥ 2× jumlah soal tampil).
+- id: q1
+  type: numeric
+  prompt: "Bola ditendang dengan v₀ = 20 m/s pada sudut 30°. Berapa jangkauannya? (g = 9,8 m/s²)"
+  answer: 35.3
+  tolerance: 0.5
+  unit: m
+  hints:
+    - "Gunakan R = v₀² sin(2θ) / g"
+    - "sin 60° ≈ 0,866"
+  explanation: "R = 20² × 0,866 / 9,8 ≈ 35,3 m."
+  misconception: "Menganggap sudut 45° selalu memberi jarak terjauh untuk semua kondisi."
+  difficulty: 2
+  concept: fis-gerak-parabola
+
+- id: q2
+  type: mcq
+  prompt: "Pada gerak parabola tanpa hambatan udara, besaran apa yang tetap (konstan)?"
+  options:
+    - "Kecepatan horizontal"
+    - "Kecepatan vertikal"
+    - "Ketinggian bola"
+    - "Waktu tempuh"
+  answer: 0
+  explanation: "Tidak ada gaya horizontal (abaikan udara), jadi kecepatan horizontal tetap."
+  misconception: "Mengira kecepatan vertikal juga konstan."
+  difficulty: 1
+  concept: fis-gerak-parabola
+
+- id: q3
+  type: numeric
+  prompt: "Sudut elevasi berapa yang memberi jangkauan terjauh untuk kecepatan awal yang sama?"
+  answer: 45
+  tolerance: 1
+  unit: derajat
+  hints:
+    - "Jangkauan maksimum saat sin(2θ) maksimum."
+  explanation: "sin(2θ) maksimum = 1 saat 2θ = 90°, jadi θ = 45°."
+  difficulty: 2
+  concept: fis-gerak-parabola

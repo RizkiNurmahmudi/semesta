@@ -1,0 +1,29 @@
+# Graf konsep & prasyarat (PRD 6.4). Divalidasi tools/build-content.
+concepts:
+  - id: mat-pecahan-rasio
+    title: Pecahan & Rasio
+    domain: matematika
+    topic: bilangan
+    keywords: [pecahan, rasio, persen]
+    prerequisites: []
+
+  - id: mat-trigonometri-dasar
+    title: Trigonometri Dasar
+    domain: matematika
+    topic: geometri
+    keywords: [sinus, cosinus, sudut]
+    prerequisites: [mat-pecahan-rasio]
+
+  - id: fis-gerak-lurus
+    title: Gerak Lurus
+    domain: fisika
+    topic: mekanika
+    keywords: [kecepatan, jarak, waktu]
+    prerequisites: [mat-pecahan-rasio]
+
+  - id: fis-gerak-parabola
+    title: Gerak Parabola
+    domain: fisika
+    topic: mekanika
+    keywords: [proyektil, sudut, jangkauan]
+    prerequisites: [fis-gerak-lurus, mat-trigonometri-dasar]

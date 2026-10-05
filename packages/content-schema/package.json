@@ -1,0 +1,1 @@
+{"dependencies":{"zod":"^3.24.0"},"devDependencies":{"typescript":"^5.9.2","vitest":"^3.2.4"},"exports":{".":"./src/index.ts"},"main":"./src/index.ts","name":"@semesta/content-schema","private":true,"type":"module","types":"./src/index.ts","version":"0.1.0"}

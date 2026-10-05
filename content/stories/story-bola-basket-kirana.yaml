@@ -1,0 +1,44 @@
+# Naskah "Bola Basket Kirana" — mengikuti template PRD 17.2.
+# Gambar panel dibuat di M1 (lihat docs/VISUAL_GUIDE.md).
+id: story-bola-basket-kirana
+title: "Bola Basket Kirana"
+concept: fis-gerak-parabola
+levels: [L0, L1]
+characters: [kirana, kakek]
+learningQuestion: "Kenapa lintasan bola melengkung, dan bagaimana cara membuatnya masuk ring?"
+panels:
+  - id: p1
+    image: /img/stories/story-bola-basket-kirana/p1.webp
+    alt: "Kirana memegang bola basket di lapangan, bertanya kepada kakeknya kenapa bolanya tidak masuk ring."
+    caption: "Kakek, kenapa bolaku tidak masuk ring?"
+    dialogue:
+      - { who: kirana, text: "Kakek, kenapa bolaku tidak masuk ring?" }
+  - id: p2
+    image: /img/stories/story-bola-basket-kirana/p2.webp
+    alt: "Bola dilempar lurus ke arah ring, lalu melengkung turun sebelum sampai."
+    caption: "Bola yang dilempar lurus melengkung turun sebelum sampai."
+    dialogue: []
+  - id: p3
+    image: /img/stories/story-bola-basket-kirana/p3.webp
+    alt: "Kakek memperagakan lemparan yang lebih miring ke atas."
+    caption: "Coba miringkan lemparanmu."
+    dialogue:
+      - { who: kakek, text: "Coba miringkan lemparanmu." }
+  - id: p4
+    image: /img/stories/story-bola-basket-kirana/p4.webp
+    alt: "Dua garis lintasan: satu datar dan satu melengkung tinggi, keduanya menuju ring."
+    caption: "Kenapa lintasannya melengkung?"
+    dialogue:
+      - { who: kirana, text: "Kenapa lintasannya melengkung?" }
+  - id: p5
+    image: /img/stories/story-bola-basket-kirana/p5.webp
+    alt: "Ikon simulator berkedip mengajak mencoba."
+    caption: "Ayo kita coba di simulator!"
+    dialogue:
+      - { who: kakek, text: "Ayo kita coba di simulator!" }
+  - id: p6
+    image: /img/stories/story-bola-basket-kirana/p6.webp
+    alt: "Bola masuk ring, Kirana melompat gembira."
+    caption: "Ternyata sudutnya yang penting!"
+    dialogue:
+      - { who: kirana, text: "Ternyata sudutnya yang penting!" }
